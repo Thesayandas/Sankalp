@@ -171,7 +171,7 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 .form-group input,.form-group select,.form-group textarea{width:100%;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:13px 16px;font-size:15px;color:var(--text);font-family:'Nunito',sans-serif;transition:.2s;outline:none}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold);background:rgba(245,197,24,0.04)}
 .form-group select{cursor:pointer}
-.form-group select option{background:var(--card2);color:#fff}
+.form-group select option{background:var(--card2);color:var(--text)}
 .form-group textarea{resize:vertical;min-height:120px}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .contact-info-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;display:flex;align-items:flex-start;gap:16px;box-shadow:var(--shadow)}
@@ -234,12 +234,12 @@ footer{background:var(--blue2);border-top:none;color:#fff;padding:60px 24px 0}
 .footer-col ul li a,.footer-col ul li span{font-size:14px;color:rgba(255,255,255,0.8);transition:.15s;cursor:pointer;display:block}
 .footer-col ul li a:hover,.footer-col ul li span:hover{color:var(--gold);padding-left:5px}
 .footer-contact-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start}
-.fc-icon{width:30px;height:30px;background:rgba(255,255,255,0.15);color:#fff;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:1px}
+.fc-icon{width:30px;height:30px;background:rgba(243, 243, 243, 0.15);color:#fff;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;margin-top:1px}
 .fc-text{font-size:13px;color:rgba(255,255,255,0.8)}
 .fc-text a{color:rgba(255,255,255,0.8);transition:.15s}
 .fc-text a:hover{color:var(--gold)}
-.footer-bottom{border-top:1px solid var(--border);padding:20px 0;text-align:center;font-size:13px;color:var(--muted);max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.footer-bottom a{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:20px 0;text-align:center;font-size:13px;color:var(--gold);max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;font-weight:600;}
+.footer-bottom a{color:var(--gold);font-weight:800}
 
 /* ===== WA FLOAT ===== */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:9999}
