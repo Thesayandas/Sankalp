@@ -6,176 +6,7 @@
 <title>Career Roadmaps | Sankalp Study Circle</title>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-  <style>
-    .roadmap-section { padding: 80px 0; background: #f0f2f5; overflow: hidden; }
-    
-    .road-track-wrap {
-      max-width: 1000px;
-      margin: 0 auto 150px;
-      position: relative;
-      padding-top: 40px;
-    }
 
-    /* THE ROAD */
-    .road-path {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 80px;
-      background: #2c2e33;
-      transform: translateX(-50%);
-      z-index: 1;
-      border-left: 5px solid #fff;
-      border-right: 5px solid #fff;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-    }
-    .road-path::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: repeating-linear-gradient(to bottom, #f5c518 0, #f5c518 30px, transparent 30px, transparent 60px);
-      transform: translateX(-50%);
-    }
-
-    .track-intro {
-      text-align: center;
-      margin-bottom: 100px;
-      position: relative;
-      z-index: 10;
-    }
-    .track-title {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 48px;
-      font-weight: 900;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      margin-bottom: 10px;
-    }
-
-    /* MILESTONES */
-    .milestone {
-      display: flex;
-      align-items: center;
-      margin-bottom: 80px;
-      position: relative;
-      z-index: 5;
-    }
-    
-    .milestone-card {
-      width: 44%;
-      background: #fff;
-      padding: 28px;
-      border-radius: 24px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-      position: relative;
-      border: 1px solid var(--border);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .milestone-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 25px 50px rgba(10,15,102,0.12);
-    }
-
-    .milestone:nth-child(even) { justify-content: flex-start; }
-    .milestone:nth-child(odd) { justify-content: flex-end; }
-
-    /* Road Sign Connector */
-    .milestone-card::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 40px;
-      height: 2px;
-      background: #333;
-      z-index: -1;
-    }
-    .milestone:nth-child(even) .milestone-card::before { right: -40px; }
-    .milestone:nth-child(odd) .milestone-card::before { left: -40px; }
-
-    .milestone-marker {
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      border: 6px solid var(--navy);
-      border-radius: 50%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 6;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 800;
-      font-size: 14px;
-      color: var(--navy);
-    }
-
-    /* Step Styling */
-    .m-step {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 12px;
-    }
-    .m-step-icon {
-      width: 40px;
-      height: 40px;
-      background: #f0f2f5;
-      color: var(--navy);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .m-step-info b { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; display: block; }
-    .m-step-info span { font-size: 16px; font-weight: 800; color: var(--navy); }
-
-    .m-arrow { margin-left: 20px; color: var(--gold); font-size: 14px; margin-bottom: 12px; }
-
-    .m-dest {
-      background: #f8f9fa;
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-    .m-dest-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--navy);
-      color: var(--gold);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .m-dest-info b { font-size: 16px; color: var(--navy); display: block; margin-bottom: 2px; }
-    .m-dest-info span { font-size: 12px; color: var(--muted); line-height: 1.4; }
-
-    .pcm-theme .milestone-marker { border-color: #4abbe4; color: #4abbe4; }
-    .pcb-theme .milestone-marker { border-color: #ff5e5e; color: #ff5e5e; }
-
-    @media (max-width: 768px) {
-      .road-path { left: 40px; transform: none; }
-      .milestone { justify-content: flex-start !important; padding-left: 80px; }
-      .milestone-card { width: 100%; }
-      .milestone-marker { left: 40px; transform: translate(-50%, -50%); }
-      .milestone-card::before { left: -40px !important; right: auto !important; }
-      .track-title { font-size: 32px; }
-    }
-  </style>
 </head>
 <body>
 
@@ -238,7 +69,7 @@
 
   <!-- HERO -->
   <div class="about-hero">
-    <div class="page-hero-inner" style="display:grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: center; width:100%;">
+    <div class="page-hero-inner">
       <div>
         <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Career Roadmaps</span></div>
         <h1 class="page-hero-title">Career <span style="color:var(--gold)">Pathways</span></h1>
@@ -393,8 +224,26 @@
     @media (max-width: 1100px) {
       .tree-branches-row { flex-direction: column; gap: 80px; align-items: center; }
       .tree-branches-row::before { display: none; }
-      .major-branch { width: 100%; max-width: 540px; }
+      .major-branch { width: 100%; max-width: 600px; }
       .major-branch::before { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .tree-root-box { font-size: 20px; padding: 12px 20px; }
+      .branch-tag { font-size: 24px; margin-bottom: 30px; }
+      .tree-node-card { padding: 20px; flex-direction: column; align-items: center; text-align: center; }
+      .tree-node-card::before { left: 50%; }
+      .node-details { text-align: center; }
+      .node-icon-wrap { margin: 0 0 15px 0; }
+      .dest-line { justify-content: center; }
+      .node-details .inner-grid { grid-template-columns: 1fr !important; }
+    }
+
+    @media (max-width: 480px) {
+      .roadmap-section { padding: 40px 16px; }
+      .tree-root-box { font-size: 18px; width: 100%; }
+      .branch-tag { font-size: 20px; }
+      .main-val { font-size: 16px; }
     }
   </style>
 
@@ -423,7 +272,7 @@
                   <p>Top-tier engineering roles at global firms like Google, Microsoft, and specialized research labs.</p>
                   <div style="margin-top:15px; padding-top:10px; border-top:1px dashed #eee;">
                     <b style="font-size:10px; margin-bottom:8px;">MAJOR SPECIALIZATIONS & ROLES:</b>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align:left;">
+                    <div class="inner-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align:left;">
                       <div style="font-size:12px;">• <b>CS / AI & ML:</b> Software/AI Engineer</div>
                       <div style="font-size:12px;">• <b>Mechanical:</b> Automobile/Mfg. Engineer</div>
                       <div style="font-size:12px;">• <b>Civil:</b> Construction/Structural</div>
@@ -446,7 +295,7 @@
                   <p>Expertise in AI, Machine Learning, Web Development, and complex systems architecture.</p>
                   <div style="margin-top:15px; padding-top:10px; border-top:1px dashed #eee;">
                     <b style="font-size:10px; margin-bottom:8px;">AVAILABLE BRANCHES:</b>
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align:left;">
+                    <div class="inner-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align:left;">
                       <div style="font-size:12px;">• <b>Chemical:</b> Process/Industry Expert</div>
                       <div style="font-size:12px;">• <b>Biotech:</b> Research Scientist</div>
                       <div style="font-size:12px;">• <b>Data Science:</b> Analytics Expert</div>
