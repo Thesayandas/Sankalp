@@ -14,7 +14,7 @@
 <div class="notice-bar">
   <span>NEW</span>
   Admissions Open 2026-27 — Free Demo Classes Available! &nbsp;
-  <a href="contact.html" style="color:var(--gold);font-weight:800;text-decoration:underline">Enroll Now →</a>
+  <a href="contact.html" class="btn-enroll-blue">Enroll Now →</a>
 </div>
 
 <!-- NAV -->
@@ -61,7 +61,7 @@
     <a href="admissions.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Admissions</a>
     <a href="roadmap.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Roadmaps</a>
     <a href="contact.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Contact</a>
-    <a href="contact.html" style="color:var(--gold);font-weight:800"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Enroll Now →</a>
+    <a href="contact.html" class="btn-enroll-blue mob-enroll"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Enroll Now →</a>
   </div>
 </nav>
 
@@ -72,13 +72,14 @@
     <div class="page-hero-inner">
       <div>
         <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Career Roadmaps</span></div>
-        <h1 class="page-hero-title">Career <span style="color:var(--gold)">Pathways</span></h1>
+        <h1 class="page-hero-title"> <span style="color:var(--gold)">Career Pathways</span></h1>
         <p class="page-hero-sub">Navigate your future with precision. Explore how different entrance examinations pave the way to prestigious degrees and global professional roles.</p>
       </div>
       <div class="hero-card" style="text-align:center; padding: 28px; background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
         <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img" style="width: 70px; height: 70px; margin-bottom: 12px; border: 2px solid rgba(245,197,24,0.2); padding: 4px; border-radius: 50%;">
         <h3 style="font-family:'Rajdhani',sans-serif; font-size:22px; color:var(--gold); margin-bottom:4px">SANKALP STUDY CIRCLE</h3>
         <p style="font-size:12px; color:rgba(255,255,255,0.7); letter-spacing:1.5px; font-weight:600; margin-bottom:18px">MEDICAL | IIT-JEE | FOUNDATIONS</p>
+        <p style="font-size:14px; color:#fff; font-style:italic; line-height:1.7; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; margin-top: 0;">"Sankalp means determination. We are determined to help every student reach their full potential."</p>
       </div>
     </div>
   </div>
@@ -87,7 +88,7 @@
     .roadmap-section { padding: 80px 0; background: #fff; }
     
     .tree-wrapper {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       text-align: center;
       color: #555;
@@ -125,23 +126,23 @@
     }
 
     .tree-branches-row {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
       position: relative;
     }
     .tree-branches-row::before {
       content: '';
       position: absolute;
       top: 0;
-      left: 25%;
-      right: 25%;
+      left: 12.5%;
+      right: 12.5%;
       height: 2px;
       background: #ddd;
     }
 
     .major-branch {
-      width: 540px;
+      width: 100%;
       position: relative;
     }
     .major-branch::before {
@@ -157,12 +158,12 @@
 
     .branch-tag {
       display: inline-block;
-      margin: 30px 0 50px;
+      margin: 30px 0 40px;
       font-family: 'Rajdhani', sans-serif;
-      font-size: 28px;
+      font-size: 22px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
     }
 
     .sub-branches-grid {
@@ -172,17 +173,68 @@
       align-items: center;
     }
 
+    .bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+    .bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .bullet-icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+      stroke-width: 3;
+    }
+
+    /* Pathway Colors */
+    .pathway-pcm .branch-tag { color: #0EA5E9; }
+    .pathway-pcm .tree-node-card { border-top: 4px solid #0EA5E9; }
+    .pathway-pcm .node-icon-wrap { background: rgba(14, 165, 233, 0.1); border-color: rgba(14, 165, 233, 0.2); }
+    .pathway-pcm .node-icon-wrap svg { stroke: #0EA5E9; }
+    .pathway-pcm .bullet-icon { stroke: #0EA5E9; }
+
+    .pathway-pcb .branch-tag { color: #10B981; }
+    .pathway-pcb .tree-node-card { border-top: 4px solid #10B981; }
+    .pathway-pcb .node-icon-wrap { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); }
+    .pathway-pcb .node-icon-wrap svg { stroke: #10B981; }
+    .pathway-pcb .bullet-icon { stroke: #10B981; }
+
+    .pathway-hum .branch-tag { color: #8B5CF6; }
+    .pathway-hum .tree-node-card { border-top: 4px solid #8B5CF6; }
+    .pathway-hum .node-icon-wrap { background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2); }
+    .pathway-hum .node-icon-wrap svg { stroke: #8B5CF6; }
+    .pathway-hum .bullet-icon { stroke: #8B5CF6; }
+
+    .pathway-com .branch-tag { color: #F59E0B; }
+    .pathway-com .tree-node-card { border-top: 4px solid #F59E0B; }
+    .pathway-com .node-icon-wrap { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); }
+    .pathway-com .node-icon-wrap svg { stroke: #F59E0B; }
+    .pathway-com .bullet-icon { stroke: #F59E0B; }
+
     .tree-node-card {
       width: 100%;
       background: #fff;
       border: 1px solid #eee;
       border-radius: 12px;
-      padding: 24px;
+      padding: 16px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.03);
       display: flex;
-      gap: 20px;
-      align-items: flex-start;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      text-align: center;
       position: relative;
+      transition: all 0.3s ease;
+    }
+    .tree-node-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     .tree-node-card::before {
       content: '';
@@ -207,8 +259,8 @@
       margin-top: 5px;
     }
 
-    .node-details { text-align: left; flex-grow: 1; }
-    .node-details b { display: block; font-size: 11px; text-transform: uppercase; margin-bottom: 2px; opacity: 0.8; }
+    .node-details { text-align: center; flex-grow: 1; }
+    .node-details b { display: block; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; opacity: 0.8; }
     .node-details .main-val { font-size: 17px; font-weight: 800; margin-bottom: 8px; display: block; }
     
     .node-dest {
@@ -218,25 +270,25 @@
       padding-top: 10px;
       border-top: 1px solid #f5f5f5;
     }
-    .node-dest .dest-line { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
-    .node-dest p { font-size: 13px; line-height: 1.5; margin: 0; opacity: 0.9; }
+    .node-dest .dest-line { display: flex; align-items: center; justify-content: center; gap: 6px; font-weight: 700; font-size: 14px; }
+    .node-dest p { font-size: 12px; line-height: 1.4; margin: 0; opacity: 0.9; }
 
-    @media (max-width: 1100px) {
-      .tree-branches-row { flex-direction: column; gap: 80px; align-items: center; }
-      .tree-branches-row::before { display: none; }
-      .major-branch { width: 100%; max-width: 600px; }
-      .major-branch::before { display: none; }
+    @media (max-width: 1200px) {
+      .tree-branches-row { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .tree-branches-row::before { left: 25%; right: 25%; }
     }
 
     @media (max-width: 768px) {
+      .tree-branches-row { grid-template-columns: 1fr; gap: 60px; }
+      .tree-branches-row::before { display: none; }
+      .major-branch::before { display: none; }
+      .branch-tag { margin: 10px 0 30px; font-size: 24px; }
       .tree-root-box { font-size: 20px; padding: 12px 20px; }
-      .branch-tag { font-size: 24px; margin-bottom: 30px; }
-      .tree-node-card { padding: 20px; flex-direction: column; align-items: center; text-align: center; }
+      .tree-node-card { padding: 20px; }
       .tree-node-card::before { left: 50%; }
       .node-details { text-align: center; }
       .node-icon-wrap { margin: 0 0 15px 0; }
       .dest-line { justify-content: center; }
-      .node-details .inner-grid { grid-template-columns: 1fr !important; }
     }
 
     @media (max-width: 480px) {
@@ -253,12 +305,14 @@
       <div class="tree-root-container">
         <div class="tree-root-box">SANKALP FOUNDATION (CLASS 6-10)</div>
         <div class="tree-split-line"></div>
+        <div class="tree-root-box" style="margin-top: 20px;">SENIOR SECONDARY (CLASS 11 & 12)</div>
+        <div class="tree-split-line" style="margin-top: 20px;"></div>
       </div>
 
       <div class="tree-branches-row">
         
         <!-- PCM BRANCH -->
-        <div class="major-branch">
+        <div class="major-branch pathway-pcm">
           <div class="branch-tag">PCM PATHWAY</div>
           <div class="sub-branches-grid">
             
@@ -272,13 +326,13 @@
                   <p>Top-tier engineering roles at global firms like Google, Microsoft, and specialized research labs.</p>
                   <div style="margin-top:15px; padding-top:10px; border-top:1px dashed #eee;">
                     <b style="font-size:10px; margin-bottom:8px;">MAJOR SPECIALIZATIONS & ROLES:</b>
-                    <div class="inner-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align:left;">
-                      <div style="font-size:12px;">• <b>CS / AI & ML:</b> Software/AI Engineer</div>
-                      <div style="font-size:12px;">• <b>Mechanical:</b> Automobile/Mfg. Engineer</div>
-                      <div style="font-size:12px;">• <b>Civil:</b> Construction/Structural</div>
-                      <div style="font-size:12px;">• <b>Electrical:</b> Power Systems Expert</div>
-                      <div style="font-size:12px;">• <b>ECE:</b> Telecom/Embedded Systems</div>
-                      <div style="font-size:12px;">• <b>Aerospace:</b> Aircraft/Space Tech</div>
+                    <div class="bullet-list">
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>CS / AI & ML:</b> Software/AI Engineer</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Mechanical:</b> Automobile/Mfg. Engineer</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Civil:</b> Construction/Structural</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Electrical:</b> Power Systems Expert</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>ECE:</b> Telecom/Embedded Systems</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Aerospace:</b> Aircraft/Space Tech</div></div>
                     </div>
                   </div>
                 </div>
@@ -295,13 +349,25 @@
                   <p>Expertise in AI, Machine Learning, Web Development, and complex systems architecture.</p>
                   <div style="margin-top:15px; padding-top:10px; border-top:1px dashed #eee;">
                     <b style="font-size:10px; margin-bottom:8px;">AVAILABLE BRANCHES:</b>
-                    <div class="inner-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; text-align:left;">
-                      <div style="font-size:12px;">• <b>Chemical:</b> Process/Industry Expert</div>
-                      <div style="font-size:12px;">• <b>Biotech:</b> Research Scientist</div>
-                      <div style="font-size:12px;">• <b>Data Science:</b> Analytics Expert</div>
-                      <div style="font-size:12px;">• <b>Automation:</b> Robotics Specialist</div>
+                    <div class="bullet-list">
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Chemical:</b> Process/Industry Expert</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Biotech:</b> Research Scientist</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Data Science:</b> Analytics Expert</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Automation:</b> Robotics Specialist</div></div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tree-node-card">
+              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <div class="node-details">
+                <b>Entrance Exam</b>
+                <span class="main-val">WBJEE</span>
+                <div class="node-dest">
+                  <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>B.Tech / B.E. (State) ➔ Engineer</span></div>
+                  <p>Engineering degree from top state institutions like Jadavpur University or other reputed colleges in West Bengal.</p>
                 </div>
               </div>
             </div>
@@ -358,7 +424,7 @@
         </div>
 
         <!-- PCB BRANCH -->
-        <div class="major-branch">
+        <div class="major-branch pathway-pcb">
           <div class="branch-tag">PCB PATHWAY</div>
           <div class="sub-branches-grid">
 
@@ -377,8 +443,10 @@
             <div class="tree-node-card">
               <div class="node-icon-wrap">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 5c-1.1 0-2 .9-2 2v4c0 3 2.5 5 4 7 1 1.5 1 3.5 1 5h4c0-1.5 0-3.5 1-5 1.5-2 4-4 4-7V7c0-1.1-.9-2-2-2h-3c-1 0-2 .5-3 1.5C9 5.5 8 5 7 5z"/>
-                  <path d="M12 21v-4"/>
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
                 </svg>
               </div>
               <div class="node-details">
@@ -392,7 +460,12 @@
             </div>
 
             <div class="tree-node-card">
-              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="m12 10 2 4v6a2 2 0 0 1-2 2v0a2 2 0 0 1-2-2v-6l2-4Z"/><path d="M12 10V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v6h10Z"/><path d="M12 10V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6H12Z"/></svg></div>
+              <div class="node-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                </svg>
+              </div>
               <div class="node-details">
                 <b>Entrance Exam</b>
                 <span class="main-val">NEET Alternative</span>
@@ -435,6 +508,99 @@
                 <div class="node-dest">
                   <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>B.V.Sc & AH ➔ Veterinarian</span></div>
                   <p>Specialized animal healthcare, surgery, and livestock management in urban or rural sectors.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- HUMANITIES BRANCH -->
+        <div class="major-branch pathway-hum">
+          <div class="branch-tag">HUMANITIES PATHWAY</div>
+          <div class="sub-branches-grid">
+            
+            <div class="tree-node-card">
+              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="node-details">
+                <b>Entrance Exam</b>
+                <span class="main-val">CLAT / AILET</span>
+                <div class="node-dest">
+                  <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>Integrated BA-LLB / BBA-LLB</span></div>
+                  <p>An intensive 5-year program entered right after 12th for a career in Law & Legal Systems.</p>
+                  <div style="margin-top:15px; padding-top:10px; border-top:1px dashed #eee;">
+                    <b style="font-size:10px; margin-bottom:8px;">MAJOR ROLES:</b>
+                    <div class="bullet-list">
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Corporate Law:</b> Legal Advisor</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Litigation:</b> Advocate / Lawyer</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div><b>Judiciary:</b> Judge / Magistrate</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COMMERCE BRANCH -->
+        <div class="major-branch pathway-com">
+          <div class="branch-tag">COMMERCE PATHWAY</div>
+          <p style="margin-top:-30px; margin-bottom:30px; font-weight:600; font-size:14px; opacity:0.8;">Core Subjects: Accountancy, Business Studies, Economics</p>
+          <div class="sub-branches-grid">
+            
+            <div class="tree-node-card">
+              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+              <div class="node-details">
+                <b>Degree Route</b>
+                <span class="main-val">B.Com (Hons) + MBA</span>
+                <div class="node-dest">
+                  <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>The Corporate Power Route</span></div>
+                  <p>Traditional pathway to top-tier management and financial roles in the corporate sector.</p>
+                  <div style="margin-top:15px; padding-top:10px; border-top:1px dashed #eee;">
+                    <b style="font-size:10px; margin-bottom:8px;">WHERE IT LANDS YOU:</b>
+                    <div class="bullet-list">
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div>Investment Banker</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div>Risk Analyst</div></div>
+                      <div class="bullet-item"><svg class="bullet-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"></polyline></svg><div>Strategy Consultant</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tree-node-card">
+              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+              <div class="node-details">
+                <b>Professional Course</b>
+                <span class="main-val">Chartered Accountant (CA)</span>
+                <div class="node-dest">
+                  <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>ICAI Certification ➔ Finance Expert</span></div>
+                  <p>Expertise in auditing, taxation, financial reporting, and corporate finance.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tree-node-card">
+              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div>
+              <div class="node-details">
+                <b>Professional Course</b>
+                <span class="main-val">Company Secretary (CS)</span>
+                <div class="node-dest">
+                  <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>ICSI Certification ➔ Legal Compliance</span></div>
+                  <p>Specialist in corporate governance, company law, and regulatory compliance.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="tree-node-card">
+              <div class="node-icon-wrap"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+              <div class="node-details">
+                <b>Global Alternatives</b>
+                <span class="main-val">CFA / BBA / BMS</span>
+                <div class="node-dest">
+                  <div class="dest-line"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>Global Finance & Management</span></div>
+                  <p>Chartered Financial Analyst (CFA) or Bachelor degrees in Administration and Management.</p>
                 </div>
               </div>
             </div>
