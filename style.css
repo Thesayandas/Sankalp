@@ -269,7 +269,7 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 .footer-bottom a{color:var(--gold);font-weight:800}
 
 /* ===== WA FLOAT ===== */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:9999}
+.wa-float{position:fixed;bottom:48px;right:28px;z-index:9999}
 .wa-float a{width:72px;height:72px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 28px rgba(37,211,102,.5);transition:.2s}
 .wa-float a:hover{transform:scale(1.12);box-shadow:0 10px 36px rgba(37,211,102,.6)}
 .wa-float svg{width:38px;height:38px;fill:#fff}
