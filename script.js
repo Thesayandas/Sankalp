@@ -7,4 +7,5 @@ function submitForm() {
 }
 function closeModal() {
   document.getElementById('modal').classList.remove('show');
+  document.getElementById('modal').style.display = '';
 }

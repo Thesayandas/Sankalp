@@ -210,20 +210,7 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 .map-wrap p{color:var(--muted);font-size:14px;font-weight:600}
 .map-pin{font-size:36px}
 
-/* ===== RESULTS PAGE ===== */
-.results-banner{background:linear-gradient(135deg,var(--gold2),var(--gold),var(--gold3));padding:32px 24px;text-align:center;position:relative;overflow:hidden}
-.results-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(10,22,40,0.1) 1px,transparent 1px);background-size:30px 30px}
-.results-banner h1{font-size:clamp(28px,4vw,52px);color:var(--navy);font-weight:700;position:relative;z-index:1}
-.results-banner p{font-size:16px;color:var(--text);margin-top:10px;position:relative;z-index:1;font-weight:600}
-.topper-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;transition:.2s;position:relative;overflow:hidden}
-.topper-card:hover{border-color:rgba(245,197,24,0.4);transform:translateY(-4px)}
-.topper-card.gold-card{border-color:var(--gold);background:linear-gradient(135deg,var(--card),rgba(245,197,24,0.06))}
-.topper-card.gold-card::before{content:'🏆';position:absolute;top:12px;right:12px;font-size:20px}
-.topper-avatar{width:70px;height:70px;border-radius:50%;background:var(--grad-navy);display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:#fff;margin:0 auto 14px;border:2px solid rgba(245,197,24,0.3)}
-.topper-card h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}
-.topper-card .exam{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.5px;margin-bottom:8px}
-.topper-card .rank{font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:var(--gold);margin-bottom:4px}
-.topper-card .year{font-size:12px;color:var(--muted)}
+
 
 /* ===== ADMISSIONS ===== */
 .admission-step{display:flex;gap:20px;align-items:flex-start;margin-bottom:32px;position:relative}
@@ -275,9 +262,9 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 .wa-float svg{width:38px;height:38px;fill:#fff}
 
 /* ===== NOTICE BAR ===== */
-.notice-bar{background:#070b4a;padding:6px 24px;text-align:center;font-size:13px;font-weight:700;color:#fff;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(248,218,29,0.15)}
-.notice-bar span{background:crimson;color:#fff;border-radius:3px;padding:2px 6px;font-size:11px;font-weight:800;letter-spacing:.5px;animation:noticeBlink 1s ease-in-out infinite}
-.notice-bar a.btn-enroll-blue {background:crimson !important;animation:noticeBlink 1s ease-in-out infinite;padding-top:4px;padding-bottom:4px;font-size:12px;}
+.notice-bar{background:#070b4a;padding:12px 34px;text-align:center;font-size:16px;font-weight:700;color:#fff;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(248,218,29,0.15)}
+.notice-bar span{background:rgb(255, 0, 0);color:#fff;border-radius:3px;padding:4px 8px;font-size:14px;font-weight:800;letter-spacing:.5px;animation:noticeBlink 1s ease-in-out infinite}
+.notice-bar a.btn-enroll-blue {background:rgb(255, 0, 51) !important;animation:noticeBlink 1s ease-in-out infinite;padding-top:6px;padding-bottom:6px;font-size:14px;}
 @keyframes noticeBlink{0%,100%{opacity:1}50%{opacity:0.15}}
 
 /* ===== ENROLL BLUE BUTTON ===== */
@@ -345,7 +332,7 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 }
 
 /* ===== SUCCESS MODAL ===== */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;display:flex;align-items:center;justify-content:center;display:none}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:10000;display:flex;align-items:center;justify-content:center;display:none}
 .modal-overlay.show{display:flex}
 .modal-box{background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:24px;max-width:400px;width:90%;text-align:center}
 .modal-icon{font-size:56px;margin-bottom:16px}
