@@ -263,8 +263,8 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 
 /* ===== NOTICE BAR ===== */
 .notice-bar{background:#070b4a;padding:12px 34px;text-align:center;font-size:16px;font-weight:700;color:#fff;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(248,218,29,0.15)}
-.notice-bar span{background:rgb(255, 0, 0);color:#fff;border-radius:3px;padding:4px 8px;font-size:14px;font-weight:800;letter-spacing:.5px;animation:noticeBlink 1s ease-in-out infinite}
-.notice-bar a.btn-enroll-blue {background:rgb(255, 0, 51) !important;animation:noticeBlink 1s ease-in-out infinite;padding-top:6px;padding-bottom:6px;font-size:14px;}
+.notice-bar span{background:rgb(255, 0, 0);color:#fff;border-radius:3px;padding:4px 8px;font-size:15px;font-weight:800;letter-spacing:.5px;animation:noticeBlink 1s ease-in-out infinite}
+.notice-bar a.btn-enroll-blue {background:rgb(255, 0, 51) !important;animation:noticeBlink 1s ease-in-out infinite;padding-top:6px;padding-bottom:6px;font-size:15px;}
 @keyframes noticeBlink{0%,100%{opacity:1}50%{opacity:0.15}}
 
 /* ===== ENROLL BLUE BUTTON ===== */
@@ -320,20 +320,22 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
   .footer-bottom{flex-direction:column;text-align:center}
   .hero::after{left:50%;right:auto;transform:translateX(-50%);bottom:5%;width:400px;height:400px;opacity:0.25}
   .notice-bar {
-    padding: 8px 16px;
-    font-size: 13px;
-    gap: 6px;
+    padding: 10px 16px;
+    font-size: 14.5px;
+    row-gap: 8px;
+    column-gap: 12px;
     flex-wrap: wrap;
     line-height: 1.4;
   }
   .notice-bar span {
-    padding: 2px 6px;
-    font-size: 11px;
+    padding: 3px 7px;
+    font-size: 13.5px;
   }
   .notice-bar a.btn-enroll-blue {
-    margin-left: 8px;
-    padding: 4px 10px;
-    font-size: 12px;
+    margin-left: 0 !important;
+    border-left: none !important;
+    padding: 5px 12px !important;
+    font-size: 13.5px;
   }
 }
 @media(max-width:480px){
@@ -346,18 +348,20 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
   .hero::after{width:320px;height:320px;bottom:10%}
   .about-hero{min-height:300px;padding:60px 16px 30px}
   .notice-bar {
-    padding: 6px 10px;
-    font-size: 11px;
-    gap: 4px;
+    padding: 10px 12px;
+    font-size: 13.5px;
+    row-gap: 6px;
+    column-gap: 8px;
   }
   .notice-bar span {
-    padding: 1px 4px;
-    font-size: 9px;
+    padding: 2px 6px;
+    font-size: 12.5px;
   }
   .notice-bar a.btn-enroll-blue {
-    margin-left: 4px;
-    padding: 3px 8px;
-    font-size: 10px;
+    margin-left: 0 !important;
+    border-left: none !important;
+    padding: 4px 10px !important;
+    font-size: 12.5px;
   }
 }
 
