@@ -262,7 +262,7 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 .wa-float svg{width:38px;height:38px;fill:#fff}
 
 /* ===== NOTICE BAR ===== */
-.notice-bar{background:#070b4a;padding:12px 25px;text-align:center;font-size:16px;font-weight:700;color:#fff;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(248,218,29,0.15)}
+.notice-bar{background:#070b4a;padding:8px 18px;text-align:center;font-size:16px;font-weight:700;color:#fff;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:10px;border-bottom:1px solid rgba(248,218,29,0.15)}
 .notice-bar span{background:rgb(255, 0, 0);color:#fff;border-radius:3px;padding:4px 8px;font-size:15px;font-weight:800;letter-spacing:.5px;animation:noticeBlink 1s ease-in-out infinite}
 .notice-bar a.btn-enroll-blue {background:rgb(255, 0, 51) !important;animation:noticeBlink 1s ease-in-out infinite;padding-top:6px;padding-bottom:6px;font-size:15px;}
 @keyframes noticeBlink{0%,100%{opacity:1}50%{opacity:0.15}}
