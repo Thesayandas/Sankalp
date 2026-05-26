@@ -148,7 +148,8 @@
     .edge-pill:hover svg { color: var(--gold); }
 
     @media(max-width: 1024px) {
-      .split-row { grid-template-columns: 1fr !important; gap: 30px; margin-bottom: 30px; }
+      .split-row { display: flex !important; flex-direction: column; gap: 30px; margin-bottom: 30px; }
+      .split-row.reversed { flex-direction: column-reverse; }
       .bento-wrapper { grid-template-columns: 1fr; }
       .bento-tile.highlight { grid-column: span 1; }
       .visual-card::after { display: none; }
