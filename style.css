@@ -188,10 +188,10 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 /* ===== TEAM CARDS ===== */
 .team-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;transition:.2s}
 .team-card:hover{border-color:rgba(245,197,24,0.35);transform:translateY(-4px)}
-.team-avatar{width:80px;height:80px;border-radius:50%;background:var(--grad-navy);display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;color:#fff;margin:0 auto 16px;border:3px solid rgba(245,197,24,0.3)}
-.team-card h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:4px}
-.team-card .role{font-size:13px;color:var(--gold);font-weight:700;margin-bottom:8px;letter-spacing:.5px}
-.team-card p{font-size:13px;color:var(--muted);line-height:1.65}
+.team-avatar{width:80px;height:80px;border-radius:50%;background:var(--grad-navy);display:flex;align-items:center;justify-content:center;font-family:'Rajdhani',sans-serif;font-size:38px;font-weight:700;color:#fff;margin:0 auto 16px;border:3px solid rgba(245,197,24,0.3)}
+.team-card h3{font-size:22px;font-weight:800;color:var(--text);margin-bottom:4px}
+.team-card .role{font-size:17px;color:var(--gold);font-weight:800;margin-bottom:8px;letter-spacing:.5px}
+.team-card p{font-size:16px;color:var(--muted);line-height:1.65}
 
 /* ===== CONTACT ===== */
 .contact-form-wrap{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;box-shadow:var(--shadow)}
