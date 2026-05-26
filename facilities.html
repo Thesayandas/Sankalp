@@ -149,10 +149,18 @@
 
     @media(max-width: 1024px) {
       .split-row { grid-template-columns: 1fr !important; gap: 30px; margin-bottom: 30px; }
+      .split-row.reversed .split-visual { grid-column: 1 !important; grid-row: 1; }
+      .split-row.reversed .split-text { grid-column: 1 !important; grid-row: 2; }
       .bento-wrapper { grid-template-columns: 1fr; }
       .bento-tile.highlight { grid-column: span 1; }
       .visual-card::after { display: none; }
       .premium-section { padding: 30px 24px; }
+    }
+    @media(max-width: 768px) {
+      .edge-highlight { padding: 40px 16px; }
+      .edge-inner h2 { font-size: 32px; margin-bottom: 12px; }
+      .edge-inner p { font-size: 15px; margin-bottom: 24px; }
+      .edge-pill { padding: 10px 20px; font-size: 13px; }
     }
   </style>
 
