@@ -68,291 +68,683 @@
   </div>
 </nav>
 
-
 <div class="page active" id="page-facilities">
   <style>
-    /* Premium Polished Layout CSS */
-    .premium-section { padding: 40px 24px; position: relative; }
-    .premium-section.dark { background: var(--grad-navy); color: #fff; overflow: hidden; }
-    .premium-section.dark::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(245,197,24,0.06) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; }
-    
-    .section-header { text-align: center; margin-bottom: 30px; position: relative; z-index: 2; }
-    .section-header .tag { display: inline-block; background: rgba(245,197,24,0.15); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-bottom: 12px; border: 1px solid rgba(245,197,24,0.3); }
-    .section-header h2 { font-size: 40px; font-weight: 800; color: var(--text); margin-bottom: 16px; font-family: 'Rajdhani', sans-serif; }
-    .section-header p { font-size: 16px; color: var(--muted); max-width: 650px; margin: 0 auto; line-height: 1.7; }
-    .dark .section-header h2 { color: #fff; }
-    .dark .section-header p { color: rgba(255,255,255,0.8); }
+    /* ===== FACILITIES PAGE — FULL REVAMP ===== */
 
-    /* Zig-Zag Split Layout */
-    .split-row { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; max-width: 1280px; margin: 0 auto 40px; align-items: center; }
-    .split-row:last-child { margin-bottom: 0; }
-    .split-row.reversed { grid-template-columns: 1.2fr 1fr; }
-    .split-row.reversed .split-text { grid-column: 2; grid-row: 1; }
-    .split-row.reversed .split-visual { grid-column: 1; grid-row: 1; }
-    
-    .split-visual { position: relative; }
-    .visual-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(245,197,24,0.3); border-radius: 24px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); backdrop-filter: blur(10px); text-align: center; position: relative; z-index: 2; }
-    .visual-card::after { content: ''; position: absolute; top: -20px; right: -20px; width: 100%; height: 100%; border: 2px dashed rgba(245,197,24,0.2); border-radius: 24px; z-index: -1; }
-    .visual-icon { width: 60px; height: 60px; background: rgba(245,197,24,0.1); color: var(--gold); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 1px solid rgba(245,197,24,0.3); }
-    .visual-icon svg { width: 28px; height: 28px; }
-    .visual-card h3 { font-size: 28px; color: var(--gold); margin-bottom: 12px; }
-    .visual-card p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6; }
-    
-    .split-text { display: flex; flex-direction: column; gap: 20px; }
-    .feature-list-item { display: flex; align-items: flex-start; gap: 16px; background: var(--card); border: 1px solid var(--border); padding: 24px; border-radius: 16px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-    .feature-list-item:hover { transform: translateX(5px); border-color: rgba(10, 15, 102, 0.4); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
-    .dark .feature-list-item { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1); }
-    .dark .feature-list-item:hover { border-color: var(--gold); background: rgba(255,255,255,0.06); }
-    
-    .fl-icon { width: 48px; height: 48px; background: rgba(10, 15, 102, 0.08); color: var(--dnav2); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .dark .fl-icon { background: rgba(245,197,24,0.15); color: var(--gold); }
-    
-    .fl-text h4 { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-    .fl-text p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
-    .dark .fl-text h4 { color: #fff; }
-    .dark .fl-text p { color: rgba(255,255,255,0.7); }
+    #page-facilities { background: #fff; }
 
-    /* Polished Bento Grid */
-    .bento-wrapper { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .bento-tile { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.03); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-start; }
-    .bento-tile:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); border-color: var(--dnav2); }
-    .bento-tile::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, transparent, var(--dnav2), transparent); opacity: 0; transition: 0.3s; }
-    .bento-tile:hover::before { opacity: 1; }
-    
-    .bento-tile.highlight { grid-column: span 2; background: var(--grad-navy); color: #fff; border: none; }
-    .bento-tile.highlight::before { background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 1; }
-    .bento-tile.highlight h3 { color: #fff; }
-    .bento-tile.highlight p { color: rgba(255,255,255,0.9); }
-    .bento-tile.highlight .tile-icon { background: rgba(255,255,255,0.2); color: #fff; }
-    
-    .tile-icon { width: 50px; height: 50px; background: rgba(10, 15, 102, 0.08); color: var(--dnav2); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-    .bento-tile h3 { font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .bento-tile p { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
-    
-    .bento-list { list-style: none; margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .bento-list li { font-size: 14px; color: var(--text); display: flex; align-items: flex-start; gap: 8px; font-weight: 600; }
-    .bento-list li::before { content: '✓'; color: var(--gold); font-weight: 900; background: rgba(245,197,24,0.15); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .bento-tile.highlight .bento-list li { color: rgba(255,255,255,0.9); }
-
-    /* Edge Footer Highlight */
-    .edge-highlight { background: var(--gold); padding: 50px 24px; text-align: center; position: relative; overflow: hidden; border-top: none; }
-    .edge-highlight::after { content: ''; position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 60%); border-radius: 50%; pointer-events: none; }
-    .edge-inner { max-width: 1000px; margin: 0 auto; position: relative; z-index: 2; }
-    .edge-inner h2 { font-size: 46px; font-weight: 900; color: var(--grad-navy); margin-bottom: 16px; font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; }
-    .edge-inner h2 span { color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    .edge-inner p { font-size: 18px; color: var(--text); max-width: 700px; margin: 0 auto 30px; font-weight: 700; opacity: 0.9; }
-    .edge-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
-    .edge-pill { background: rgba(255,255,255,0.5); border: 2px solid rgba(10, 15, 102, 0.2); padding: 12px 24px; border-radius: 30px; color: var(--grad-navy); font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 10px; transition: 0.3s; backdrop-filter: blur(5px); }
-    .edge-pill:hover { background: var(--grad-navy); border-color: var(--grad-navy); color: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(10,15,102,0.2); }
-    .edge-pill svg { color: var(--grad-navy); transition: 0.3s; }
-    .edge-pill:hover svg { color: var(--gold); }
-
-    @media(max-width: 1024px) {
-      .split-row { display: flex !important; flex-direction: column; gap: 30px; margin-bottom: 30px; }
-      .split-row.reversed { flex-direction: column-reverse; }
-      .bento-wrapper { grid-template-columns: 1fr; }
-      .bento-tile.highlight { grid-column: span 1; }
-      .visual-card::after { display: none; }
-      .premium-section { padding: 30px 24px; }
+    /* ─────────────────────────────────────────
+       ① COMPETITIVE EDGE — WHITE + NAVY
+    ───────────────────────────────────────── */
+    .fac-edge-banner {
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 24px 56px;
+      text-align: center;
+      border-bottom: 1px solid #eef0f8;
     }
-    
+    .fac-edge-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(10,15,102,0.05) 1px, transparent 1px);
+      background-size: 26px 26px;
+      pointer-events: none;
+    }
+    .fac-edge-banner::after {
+      content: '';
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 400px;
+      background: radial-gradient(ellipse, rgba(248,218,29,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .fac-edge-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+
+    .fac-edge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--grad-navy);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 7px 20px;
+      border-radius: 30px;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+      border: none;
+    }
+    .fac-edge-tag::before { content: '★'; font-size: 10px; }
+
+    .fac-edge-banner h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 900;
+      color: #0a0f66;
+      margin-bottom: 12px;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+    .fac-edge-banner h2 span { color: #f8da1d; -webkit-text-stroke: 1px #d4a900; }
+    .fac-edge-banner > .fac-edge-inner > p {
+      font-size: 16px;
+      color: #6b7280;
+      margin-bottom: 36px;
+      font-weight: 600;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .edge-pills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .edge-pill-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #0a0f66;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.25s;
+      letter-spacing: 0.3px;
+    }
+    .edge-pill-dark:hover {
+      background: #f8da1d;
+      color: #0a0f66;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(248,218,29,0.35);
+    }
+    .edge-pill-dark svg { flex-shrink: 0; color: #f8da1d; transition: 0.25s; }
+    .edge-pill-dark:hover svg { color: #0a0f66; }
+
+    /* ─────────────────────────────────────────
+       SECTION BASE STYLES
+    ───────────────────────────────────────── */
+    .fac-section { padding: 64px 24px; position: relative; background: #f0f4ff; }
+    .fac-section.alt { background: #ffffff; }
+    .fac-section.dark-bg {
+      background: linear-gradient(160deg, #0a0f66 0%, #06093d 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+    .fac-section.dark-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(248,218,29,0.055) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .fac-section-inner { max-width: 1180px; margin: 0 auto; }
+
+    /* ─────────────────────────────────────────
+       SECTION HEADERS
+    ───────────────────────────────────────── */
+    .fac-sec-hdr { text-align: center; margin-bottom: 44px; }
+
+    /* Light section tag (alt = white bg) */
+    .fac-sec-hdr .stag {
+      display: inline-block;
+      background: #f8da1d;
+      color: #0a0f66;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 5px 18px;
+      border-radius: 4px;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+      border: none;
+    }
+    /* Default section tag (ice-blue bg) */
+    .fac-section:not(.alt):not(.dark-bg) .fac-sec-hdr .stag {
+      background: #0a0f66;
+      color: #f8da1d;
+    }
+    /* Dark section tag */
+    .dark-bg .fac-sec-hdr .stag {
+      background: rgba(248,218,29,0.15);
+      color: #f8da1d;
+      border: 1px solid rgba(248,218,29,0.35);
+      border-radius: 20px;
+      padding: 5px 18px;
+    }
+
+    .fac-sec-hdr h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
+      color: #0a0f66;
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .fac-sec-hdr h2 { color: #0a0f66; }
+    .dark-bg .fac-sec-hdr h2 { color: #fff; }
+
+    .fac-sec-hdr p {
+      font-size: 15px;
+      color: #6b7280;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-weight: 600;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .fac-sec-hdr p { color: #4b5563; }
+    .dark-bg .fac-sec-hdr p { color: rgba(255,255,255,0.68); }
+
+    /* ─────────────────────────────────────────
+       ICON CARDS
+    ───────────────────────────────────────── */
+    .icon-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    /* ── WHITE SECTION CARDS (alt) ── */
+    .fac-section.alt .icon-card {
+      background: #fff;
+      border: 1px solid #e8ecf8;
+      border-left: 4px solid #f8da1d;
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: 0.3s;
+      box-shadow: 0 2px 16px rgba(10,15,102,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .fac-section.alt .icon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(10,15,102,0.12);
+      border-left-color: #0a0f66;
+    }
+    .fac-section.alt .ic-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0a0f66, #1e3a8a);
+      color: #f8da1d;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .fac-section.alt .ic-title { font-size: 17px; font-weight: 800; color: #0a0f66; font-family: 'Rajdhani', sans-serif; }
+    .fac-section.alt .ic-bullets li { font-size: 13px; color: #4b5563; font-weight: 600; display: flex; align-items: center; gap: 9px; }
+    .fac-section.alt .ic-bullets li .blt-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #f8da1d; color: #0a0f66;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* ── ICE-BLUE SECTION CARDS (default .fac-section) ── */
+    .fac-section:not(.alt):not(.dark-bg) .icon-card {
+      background: #ffffff;
+      border: 1px solid #dde3f5;
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: 0.3s;
+      box-shadow: 0 2px 12px rgba(10,15,102,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .icon-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, #0a0f66, #f8da1d);
+      opacity: 0; transition: 0.3s;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .icon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(10,15,102,0.12);
+      border-color: #a5b4fc;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .icon-card:hover::before { opacity: 1; }
+    .fac-section:not(.alt):not(.dark-bg) .ic-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: #f0f4ff; color: #0a0f66; border: 2px solid #c7d2fe;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .ic-title { font-size: 17px; font-weight: 800; color: #0a0f66; font-family: 'Rajdhani', sans-serif; }
+    .fac-section:not(.alt):not(.dark-bg) .ic-bullets li { font-size: 13px; color: #4b5563; font-weight: 600; display: flex; align-items: center; gap: 9px; }
+    .fac-section:not(.alt):not(.dark-bg) .ic-bullets li .blt-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #0a0f66; color: #f8da1d;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* ── DARK SECTION CARDS ── */
+    .dark-bg .icon-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-top: 3px solid #f8da1d;
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .dark-bg .icon-card:hover {
+      background: rgba(255,255,255,0.11);
+      border-color: rgba(248,218,29,0.5);
+      border-top-color: #f8da1d;
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+    .dark-bg .ic-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: #f8da1d; color: #0a0f66;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .dark-bg .ic-title { font-size: 17px; font-weight: 800; color: #fff; font-family: 'Rajdhani', sans-serif; }
+    .dark-bg .ic-bullets li { font-size: 13px; color: rgba(255,255,255,0.72); font-weight: 600; display: flex; align-items: center; gap: 9px; }
+    .dark-bg .ic-bullets li .blt-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(248,218,29,0.2); color: #f8da1d;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* shared bullets base */
+    .ic-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; }
+    .ic-bullets li { line-height: 1.4; }
+
+    /* ─────────────────────────────────────────
+       HOSTEL HIGHLIGHT CARD
+    ───────────────────────────────────────── */
+    .hostel-highlight {
+      background: linear-gradient(135deg, #0a0f66 0%, #06093d 100%);
+      border-radius: 18px;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid #f8da1d;
+    }
+    .hostel-highlight::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(248,218,29,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .hostel-left h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 26px; font-weight: 900; color: #fff;
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hostel-left h3 svg { color: #f8da1d; flex-shrink: 0; }
+    .hostel-left p { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.7; font-weight: 600; max-width: 500px; }
+    .hostel-bullets { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; min-width: 260px; }
+    .hostel-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(248,218,29,0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px; font-weight: 700; color: #fff;
+    }
+    .hostel-pill svg { color: #f8da1d; flex-shrink: 0; }
+
+    /* ─────────────────────────────────────────
+       CTA STRIP
+    ───────────────────────────────────────── */
+    .fac-cta-strip {
+      background: linear-gradient(135deg, #f8da1d 0%, #f5c400 100%);
+      padding: 56px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .fac-cta-strip::before {
+      content: '';
+      position: absolute;
+      bottom: -140px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(255,255,255,0.28), transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .fac-cta-strip::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(10,15,102,0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+    .fac-cta-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+    .fac-cta-inner h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 900; color: #0a0f66;
+      margin-bottom: 10px; line-height: 1.1;
+    }
+    .fac-cta-inner p { font-size: 16px; color: #0a0f66; opacity: 0.8; font-weight: 700; margin-bottom: 32px; }
+    .fac-cta-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #0a0f66; color: #f8da1d;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 16px; font-weight: 800;
+      padding: 15px 40px;
+      border-radius: 10px; letter-spacing: 0.5px;
+      transition: 0.3s; text-decoration: none;
+    }
+    .fac-cta-btn:hover {
+      background: #06093d;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(10,15,102,0.35);
+      color: #f8da1d;
+    }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media(max-width: 1024px) {
+      .icon-grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .hostel-highlight { grid-template-columns: 1fr; gap: 24px; padding: 28px 24px; }
+      .hostel-bullets { grid-template-columns: repeat(2, 1fr); min-width: unset; }
+    }
     @media(max-width: 768px) {
-      .edge-highlight { padding: 30px 16px; }
-      .edge-inner h2 { font-size: 26px; margin-bottom: 8px; line-height: 1.2; }
-      .edge-inner p { font-size: 14px; margin-bottom: 16px; line-height: 1.5; }
-      .edge-pills { gap: 8px; }
-      .edge-pill { padding: 8px 16px; font-size: 12px; width: 100%; justify-content: center; }
+      .icon-grid-3 { grid-template-columns: 1fr; }
+      .fac-section { padding: 40px 16px; }
+      .fac-edge-banner { padding: 40px 16px; }
+      .edge-pill-dark { font-size: 12px; padding: 8px 16px; }
+    }
+    @media(max-width: 480px) {
+      .hostel-bullets { grid-template-columns: 1fr; }
+      .fac-edge-banner h2 { font-size: 28px; }
     }
   </style>
 
-  <!-- ORIGINAL RESTORED HERO SECTION -->
+  <!-- HERO SECTION (unchanged) -->
   <div class="about-hero bg-1">
     <div class="page-hero-inner">
       <div>
         <div class="breadcrumb"><a href="index.html" style="cursor:pointer">Home</a><span class="sep">/</span><span>Facilities</span></div>
-        <h1 class="page-hero-title"> <span style="color:var(--gold)">Student Facilities</span></h1>
+        <h1 class="page-hero-title"><span style="color:var(--gold)">Student Facilities</span></h1>
         <p class="page-hero-sub">Comprehensive support systems designed to help every student maximize their potential and achieve their goals.</p>
       </div>
-      <div class="hero-card" style="text-align:center; padding: 24px; background: rgba(255,255,255,0.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
-        <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img" style="width: 60px; height: 60px; margin-bottom: 10px; border: 2px solid rgba(245,197,24,0.2); padding: 4px; border-radius: 50%;">
-        <h3 style="font-family:'Rajdhani',sans-serif; font-size:20px; color:var(--gold); margin-bottom:2px">SANKALP STUDY CIRCLE</h3>
-        <p style="font-size:11px; color:rgba(255,255,255,0.7); letter-spacing:1px; font-weight:600; margin-bottom:14px">MEDICAL | IIT-JEE | FOUNDATIONS</p>
-        
-        <div class="hero-card-list" style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px;">
-          <div class="hero-card-item" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; display:flex; align-items:center; gap:6px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span style="font-size:10px; font-weight:700; color:#fff;">Backup Classes</span>
+      <div class="hero-card" style="text-align:center; padding:24px; background:rgba(255,255,255,0.06); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.1); box-shadow:0 10px 40px rgba(0,0,0,0.15);">
+        <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img" style="width:60px;height:60px;margin-bottom:10px;border:2px solid rgba(245,197,24,0.2);padding:4px;border-radius:50%;">
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:20px;color:var(--gold);margin-bottom:2px">SANKALP STUDY CIRCLE</h3>
+        <p style="font-size:11px;color:rgba(255,255,255,0.7);letter-spacing:1px;font-weight:600;margin-bottom:14px">MEDICAL | IIT-JEE | FOUNDATIONS</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Backup Classes</span>
           </div>
-          <div class="hero-card-item" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; display:flex; align-items:center; gap:6px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-            <span style="font-size:10px; font-weight:700; color:#fff;">Solved Modules</span>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Solved Modules</span>
           </div>
-          <div class="hero-card-item" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; display:flex; align-items:center; gap:6px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-            <span style="font-size:10px; font-weight:700; color:#fff;">Test Analysis</span>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Test Analysis</span>
           </div>
-          <div class="hero-card-item" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; display:flex; align-items:center; gap:6px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
-            <span style="font-size:10px; font-weight:700; color:#fff;">Quick Concepts</span>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Quick Concepts</span>
           </div>
-          <div class="hero-card-item" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; display:flex; align-items:center; gap:6px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-            <span style="font-size:10px; font-weight:700; color:#fff;">Career Guidance</span>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Career Guidance</span>
           </div>
-          <div class="hero-card-item" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.06); padding:6px 8px; border-radius:8px; display:flex; align-items:center; gap:6px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span style="font-size:10px; font-weight:700; color:#fff;">24×7 Support</span>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">24×7 Support</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- SECTION 1: ACADEMIC INFRASTRUCTURE -->
-  <div class="premium-section" style="background:var(--card2);">
-    <div class="section-header">
-      <div class="tag">LEARNING ENVIRONMENT</div>
-      <h2>Academic Infrastructure</h2>
-      <p>A high-focus, distraction-free environment meticulously designed for intense competitive preparation.</p>
-    </div>
-    
-    <div class="split-row">
-      <div class="split-text">
-        <div class="feature-list-item">
-          <div class="fl-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg></div>
-          <div class="fl-text">
-            <h4>Smart Classrooms</h4>
-            <p>State-of-the-art digital classrooms with interactive teaching systems, AC, soundproofing, and ergonomic seating.</p>
-          </div>
-        </div>
-        <div class="feature-list-item">
-          <div class="fl-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
-          <div class="fl-text">
-            <h4>Academic Standards</h4>
-            <p>Limited batch sizes ensuring personalized attention, coupled with Daily Practice Papers (DPPs) and weekly tests.</p>
-          </div>
-        </div>
-        <div class="feature-list-item">
-          <div class="fl-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
-          <div class="fl-text">
-            <h4>Integrated Support</h4>
-            <p>Seamlessly blending CBSE, ICSE, and WB school academics with Olympiad, NTSE, and competitive exam preparation.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="split-visual">
-        <div class="visual-card" style="background: var(--grad-navy); border: none; box-shadow: 0 25px 60px rgba(10, 15, 102, 0.4);">
-          <div class="visual-icon" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255,255,255,0.3); color: #fff;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-          <h3 style="color: #fff;">Performance Driven</h3>
-          <p>We believe in providing the absolute best so students can concentrate entirely on their studies without distractions. Our infrastructure ensures complete focus.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION 2: BENTO GRID (LOGISTICS) - MOVED UP -->
-  <div class="premium-section">
-    <div class="section-header">
-      <div class="tag">ACCOMMODATION</div>
-      <h2>Residential & Logistics</h2>
-      <p>A secure, peaceful, and well-maintained environment specifically designed for outstation students.</p>
-    </div>
-    
-    <div class="bento-wrapper">
-      <div class="bento-tile highlight">
-        <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Separate Boys & Girls Hostels</h3>
-        <p>Premium residential facilities providing a comfortable home away from home. Strict discipline and high hygiene standards are maintained 24/7 for student welfare and security.</p>
-        <ul class="bento-list">
-          <li>Concessions Available</li>
-          <li>24/7 Supervision</li>
-          <li>Strict entry & exit logs</li>
-          <li>Warden on all floors</li>
-        </ul>
-      </div>
-      
-      <div class="bento-tile">
-        <div class="tile-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 2.3 1.9 4.1 4.2 4.1h1c2.3 0 4.2-1.8 4.2-4.1V2"></path><path d="M8 2v20"></path><path d="M21 2v20"></path><path d="M21 13c-2.8 0-5-2.2-5-5V2"></path></svg></div>
-        <h3>Nutritious Meals</h3>
-        <p>Home-style, balanced and hygienic food prepared daily in fully sanitized kitchens.</p>
-      </div>
-      
-      <div class="bento-tile">
-        <div class="tile-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg></div>
-        <h3>AC / Non-AC</h3>
-        <p>Flexible room options available to cater to student comfort and climatic requirements.</p>
-      </div>
-      
-      <div class="bento-tile">
-        <div class="tile-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6v6"></path><path d="M15 6v6"></path><path d="M2 12h19.6"></path><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg></div>
-        <h3>Transportation</h3>
-        <p>Reliable daily pick-up and drop logistics ensuring complete safety for day scholars.</p>
-      </div>
-      
-      <div class="bento-tile">
-        <div class="tile-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg></div>
-        <h3>Tech Enabled</h3>
-        <p>Wi-Fi enabled premises strictly restricted to academic portals to prevent distractions.</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- SECTION 3: EXPERT GUIDANCE (DARK) - MOVED DOWN -->
-  <div class="premium-section dark">
-    <div class="section-header">
-      <div class="tag" style="background:rgba(255,255,255,0.1); color:#fff; border-color:rgba(255,255,255,0.3);">MENTORSHIP & TECH</div>
-      <h2>Expert Guidance & Hybrid Support</h2>
-      <p>Concept-focused teaching instead of rote learning, backed by modern technology.</p>
-    </div>
-    
-    <div class="split-row reversed">
-      <div class="split-text">
-        <div class="feature-list-item">
-          <div class="fl-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
-          <div class="fl-text">
-            <h4>Experienced Educators</h4>
-            <p>Mentors bringing 5-10+ years of proven track records in producing top NEET/JEE aspirants from Pan-India institutes.</p>
-          </div>
-        </div>
-        <div class="feature-list-item">
-          <div class="fl-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-          <div class="fl-text">
-            <h4>Dedicated Mentorship</h4>
-            <p>One-to-one mentoring, personalized tracking of weak areas, and regular parent-teacher interactions.</p>
-          </div>
-        </div>
-        <div class="feature-list-item">
-          <div class="fl-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
-          <div class="fl-text">
-            <h4>Hybrid Ecosystem</h4>
-            <p>Both online & offline modes, live interactive classes, recorded lectures, and digital parent app for attendance.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="split-visual">
-        <div class="visual-card">
-          <div class="visual-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-          <h3>Digital Progress Tracking</h3>
-          <p>We merge traditional offline discipline with modern online flexibility, backed by a robust student support system to monitor growth continuously.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- THE EDGE HIGHLIGHT SECTION -->
-  <div class="edge-highlight">
-    <div class="edge-inner">
+  <!-- ① THE SANKALP COMPETITIVE EDGE — moved to top -->
+  <div class="fac-edge-banner">
+    <div class="fac-edge-inner">
+      <div class="fac-edge-tag">OUR DIFFERENTIATORS</div>
       <h2>The Sankalp <span>Competitive Edge</span></h2>
-      <p>A holistic, performance-driven system focusing on long-term results rather than crowd-based teaching.</p>
-      
-      <div class="edge-pills">
-        <div class="edge-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Small Batch System</div>
-        <div class="edge-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Individual Attention</div>
-        <div class="edge-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dropper-focused Prep</div>
-        <div class="edge-pill"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Student-first Approach</div>
-        <div class="edge-pill"><svg width="18" height="18" viewBox="0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Foundation-to-Ranker</div>
+      <p>A holistic, performance-driven system focused on long-term results — not crowd-based teaching.</p>
+      <div class="edge-pills-grid">
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Small Batch System
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Individual Attention
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Dropper-focused Prep
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          Student-first Approach
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Foundation-to-Ranker
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Concept-based Learning
+        </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ② ACADEMIC INFRASTRUCTURE -->
+  <div class="fac-section alt">
+    <div class="fac-section-inner">
+      <div class="fac-sec-hdr">
+        <div class="stag">LEARNING ENVIRONMENT</div>
+        <h2>Academic Infrastructure</h2>
+        <p>A distraction-free environment designed for intense competitive preparation.</p>
+      </div>
+      <div class="icon-grid-3">
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <div class="ic-title">Smart Classrooms</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Interactive digital boards</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> AC &amp; soundproofed rooms</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Ergonomic seating</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Distraction-free design</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="ic-title">Academic Standards</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Limited batch sizes</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Daily Practice Papers (DPPs)</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Weekly test series</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Personalized attention</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="ic-title">Integrated Curriculum</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> CBSE / ICSE / WB board</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Olympiad &amp; NTSE prep</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> NEET / JEE foundation</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> School + exam blend</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ RESIDENTIAL & LOGISTICS -->
+  <div class="fac-section">
+    <div class="fac-section-inner">
+      <div class="fac-sec-hdr">
+        <div class="stag">ACCOMMODATION</div>
+        <h2>Residential &amp; Transport</h2>
+        <p>Secure, well-maintained facilities so students stay focused on what matters most.</p>
+      </div>
+
+      <!-- Hostel highlight card -->
+      <div class="hostel-highlight">
+        <div class="hostel-left">
+          <h3>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Separate Hostels — Boys &amp; Girls
+          </h3>
+          <p>Premium accommodation with round-the-clock supervision. Strict entry/exit protocols, dedicated wardens on every floor, and a hygienic, disciplined environment.</p>
+        </div>
+        <div class="hostel-bullets">
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            24/7 Supervision
+          </div>
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Entry/Exit
+          </div>
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Warden on Each Floor
+          </div>
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Concessions Available
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting tiles -->
+      <div class="icon-grid-3">
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 2.3 1.9 4.1 4.2 4.1h1c2.3 0 4.2-1.8 4.2-4.1V2"/><path d="M8 2v20"/><path d="M21 2v20"/><path d="M21 13c-2.8 0-5-2.2-5-5V2"/></svg>
+          </div>
+          <div class="ic-title">Nutritious Meals</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Home-style balanced food</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Fully sanitized kitchen</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Fresh daily preparation</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </div>
+          <div class="ic-title">Transportation</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Daily pick-up &amp; drop</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Safe for day scholars</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Reliable scheduling</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="ic-title">Tech-Enabled Campus</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Campus-wide Wi-Fi</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Restricted to academics</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> AC &amp; Non-AC room options</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ④ EXPERT GUIDANCE & HYBRID SUPPORT (dark) -->
+  <div class="fac-section dark-bg">
+    <div class="fac-section-inner">
+      <div class="fac-sec-hdr">
+        <div class="stag">MENTORSHIP &amp; TECHNOLOGY</div>
+        <h2>Expert Guidance &amp; Hybrid Support</h2>
+        <p>Concept-led teaching backed by experienced mentors and modern digital tools.</p>
+      </div>
+      <div class="icon-grid-3">
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div class="ic-title">Experienced Educators</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> 5–10+ years experience</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Pan-India top institute alumni</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Proven NEET/JEE results</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Concept-first approach</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="ic-title">Dedicated Mentorship</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> One-to-one sessions</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Weak area tracking</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Regular PTMs</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Motivational guidance</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <div class="ic-title">Hybrid Ecosystem</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Online + offline classes</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Recorded lecture access</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Digital parent app</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Live attendance tracking</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑤ CTA STRIP -->
+  <div class="fac-cta-strip">
+    <div class="fac-cta-inner">
+      <h2>Ready to Experience the Sankalp Difference?</h2>
+      <p>Book a free demo class and see why students across Siliguri choose us.</p>
+      <a href="contact.html" class="fac-cta-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enroll for Free Demo
+      </a>
     </div>
   </div>
 
