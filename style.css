@@ -131,8 +131,10 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 /* ===== COURSE CARD ===== */
 .course-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.25s;position:relative}
 .course-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.4);border-color:rgba(245,197,24,0.4)}
-.course-top{background:var(--grad-navy);padding:28px 24px;position:relative;overflow:hidden}
-.course-top::after{content:'';position:absolute;bottom:-20px;right:-20px;width:100px;height:100px;background:rgba(255,255,255,.06);border-radius:50%}
+.course-top{background:var(--grad-navy);padding:28px 24px;position:relative;overflow:hidden;}
+.course-top > * { position: relative; z-index: 2; }
+.course-top::before{content:'';position:absolute;top:50%;right:-20px;transform:translateY(-50%);width:140px;height:140px;background-image:url('sankalp_logo.svg');background-size:contain;background-repeat:no-repeat;background-position:center;opacity:0.25;pointer-events:none;z-index:1;}
+.course-top::after{content:'';position:absolute;bottom:-20px;right:-20px;width:100px;height:100px;background:rgba(255,255,255,.06);border-radius:50%;z-index:1;}
 .course-icon{font-size:40px;margin-bottom:10px}
 .course-top h3{font-size:22px;font-weight:700;color:#fff;margin-bottom:4px}
 .course-top p{font-size:13px;color:rgba(255,255,255,.7);font-weight:600}
