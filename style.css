@@ -457,7 +457,10 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
   .btn-gold,.btn-outline-gold{text-align:center}
   body{font-size:16px}
   .section{padding:32px 16px}
-  .hero h1{font-size:32px}
+  .hero-inner{padding:24px 16px; gap:20px}
+  .hero-badge{margin-bottom:12px}
+  .hero h1{font-size:32px; margin-bottom:12px}
+  .hero p{font-size:16px; margin-bottom:20px; line-height:1.6}
   .hero::after{width:320px;height:320px;bottom:10%}
   .about-hero{min-height:300px;padding:60px 16px 30px}
   .notice-bar {
