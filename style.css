@@ -133,8 +133,8 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 .course-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.4);border-color:rgba(245,197,24,0.4)}
 .course-top{background:var(--grad-navy);padding:28px 24px;position:relative;overflow:hidden;}
 .course-top > * { position: relative; z-index: 2; }
-.course-top.bg-1 { background: linear-gradient(rgba(10, 15, 102, 0.65), rgba(10, 15, 102, 0.8)), url('DSC_8122.png') center/cover !important; }
-.course-top.bg-2 { background: linear-gradient(rgba(10, 15, 102, 0.65), rgba(10, 15, 102, 0.8)), url('DSC_8125.png') center/cover !important; }
+.course-top.bg-1 { background-image: linear-gradient(rgba(10, 15, 102, 0.65), rgba(10, 15, 102, 0.8)), url('DSC_8122.png') !important; background-position: center !important; background-size: cover !important; }
+.course-top.bg-2 { background-image: linear-gradient(rgba(10, 15, 102, 0.65), rgba(10, 15, 102, 0.8)), url('DSC_8125.png') !important; background-position: center !important; background-size: cover !important; }
 .course-icon{font-size:40px;margin-bottom:10px}
 .course-top h3{font-size:22px;font-weight:700;color:#fff;margin-bottom:4px}
 .course-top p{font-size:13px;color:rgba(255,255,255,.7);font-weight:600}
@@ -164,10 +164,14 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 .about-hero{background:var(--grad-navy);color:#fff;padding:60px 24px;position:relative;overflow:hidden;min-height:350px;display:flex;align-items:center}
 .about-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 80% 50%,rgba(248,218,29,0.06) 0%,transparent 60%),radial-gradient(ellipse at 10% 30%,rgba(74,187,228,0.05) 0%,transparent 55%);background-image:radial-gradient(rgba(245,197,24,0.05) 1px,transparent 1px);background-size:36px 36px}
 .about-hero.bg-1 {
-  background: linear-gradient(rgba(10, 15, 102, 0.55), rgba(10, 15, 102, 0.65)), url('DSC_8122.png') center/cover;
+  background-image: linear-gradient(rgba(10, 15, 102, 0.55), rgba(10, 15, 102, 0.65)), url('DSC_8122.png');
+  background-position: center;
+  background-size: cover;
 }
 .about-hero.bg-2 {
-  background: linear-gradient(rgba(10, 15, 102, 0.55), rgba(10, 15, 102, 0.65)), url('DSC_8125.png') center/cover;
+  background-image: linear-gradient(rgba(10, 15, 102, 0.55), rgba(10, 15, 102, 0.65)), url('DSC_8125.png');
+  background-position: center;
+  background-size: cover;
 }
 .page-hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;width:100%}
 
@@ -411,6 +415,7 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
+  .hide-on-mobile{display:none !important;}
   .footer-inner{grid-template-columns:1fr 1fr}
   .hero-inner{grid-template-columns:1fr; text-align:center}
   .hero-right{display:block; margin-top:40px}
