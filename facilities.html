@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sankalp Study Circle | Medical | IIT-JEE | Foundations</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=7">
+<link rel="icon" href="sankalp_logo.svg" type="image/png">
+</head>
+<body>
+
+<!-- NOTICE BAR -->
+<div class="notice-bar">
+  <span>NEW</span>
+  Admissions Open 2026-27 — Free Demo Classes Available! &nbsp;
+  <a href="contact" class="btn-enroll-blue">Enroll Now  →</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">
+      <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">SANKALP</span>
+        <span class="nav-logo-sub">STUDY CIRCLE</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/"  id="nav-home">Home</a></li>
+      <li><a href="about" id="nav-about">About Us</a></li>
+      <li class="dropdown-wrap">
+        <a href="courses">Courses ▾</a>
+        <ul class="dropdown">
+          <li><a href="courses">Competitive Exam</a></li>
+          <li><a href="courses">School Academics</a></li>
+          <li><a href="courses">Integrated Programs</a></li>
+          <li><a href="courses">Individual Subject</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="facilities" class="active" id="nav-facilities">Facilities</a></li>
+      <li><a href="admissions" id="nav-admissions">Admissions</a></li>
+      <li><a href="roadmap" id="nav-roadmap">Roadmaps</a></li>
+
+      <li><a href="contact" id="nav-contact">Contact</a></li>
+      <li><a href="contact" class="nav-cta">Enroll Free Demo</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mob-menu" id="mobMenu">
+    <a href="/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a>
+    <a href="about"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> About Us</a>
+    <a href="courses"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> Courses</a>
+    <a class="sub" href="courses">&#8627; Competitive Exam</a>
+    <a class="sub" href="courses">&#8627; School Academics</a>
+    <a class="sub" href="courses">&#8627; Integrated Programs</a>
+    <a class="sub" href="courses">&#8627; Individual Subject</a>
+    <a href="facilities"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg> Facilities</a>
+    <a href="admissions"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Admissions</a>
+    <a href="roadmap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Roadmaps</a>
+
+    <a href="contact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Contact</a>
+    <a href="contact" class="btn-enroll-blue mob-enroll"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Enroll Now  →</a>
+  </div>
+</nav>
+
+<div class="page active" id="page-facilities">
+  <style>
+    /* ===== FACILITIES PAGE — FULL REVAMP ===== */
+
+    #page-facilities { background: #fff; }
+
+    /* ─────────────────────────────────────────
+       ① COMPETITIVE EDGE — WHITE + NAVY
+    ───────────────────────────────────────── */
+    .fac-edge-banner {
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 24px 56px;
+      text-align: center;
+      border-bottom: 1px solid #eef0f8;
+    }
+    .fac-edge-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(10,15,102,0.05) 1px, transparent 1px);
+      background-size: 26px 26px;
+      pointer-events: none;
+    }
+    .fac-edge-banner::after {
+      content: '';
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 400px;
+      background: radial-gradient(ellipse, rgba(248,218,29,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .fac-edge-inner { max-width: 960px; margin: 0 auto; position: relative; z-index: 2; }
+
+    .fac-edge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--grad-navy);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 7px 20px;
+      border-radius: 30px;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+      border: none;
+    }
+    .fac-edge-tag::before { content: '★'; font-size: 10px; }
+
+    .fac-edge-banner h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(30px, 4vw, 52px);
+      font-weight: 900;
+      color: #0a0f66;
+      margin-bottom: 12px;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+    .fac-edge-banner h2 span { color: #f8da1d; -webkit-text-stroke: 1px #d4a900; }
+    .fac-edge-banner > .fac-edge-inner > p {
+      font-size: 16px;
+      color: #6b7280;
+      margin-bottom: 36px;
+      font-weight: 600;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .edge-pills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .edge-pill-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #0a0f66;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.25s;
+      letter-spacing: 0.3px;
+    }
+    .edge-pill-dark:hover {
+      background: #f8da1d;
+      color: #0a0f66;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(248,218,29,0.35);
+    }
+    .edge-pill-dark svg { flex-shrink: 0; color: #f8da1d; transition: 0.25s; }
+    .edge-pill-dark:hover svg { color: #0a0f66; }
+
+    /* ─────────────────────────────────────────
+       SECTION BASE STYLES
+    ───────────────────────────────────────── */
+    .fac-section { padding: 64px 24px; position: relative; background: #f0f4ff; }
+    .fac-section.alt { background: #ffffff; }
+    .fac-section.dark-bg {
+      background: linear-gradient(160deg, #0a0f66 0%, #06093d 100%);
+      color: #fff;
+      overflow: hidden;
+    }
+    .fac-section.dark-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(248,218,29,0.055) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    .fac-section-inner { max-width: 1180px; margin: 0 auto; }
+
+    /* ─────────────────────────────────────────
+       SECTION HEADERS
+    ───────────────────────────────────────── */
+    .fac-sec-hdr { text-align: center; margin-bottom: 44px; }
+
+    /* Light section tag (alt = white bg) */
+    .fac-sec-hdr .stag {
+      display: inline-block;
+      background: #f8da1d;
+      color: #0a0f66;
+      font-size: 10px;
+      font-weight: 900;
+      padding: 5px 18px;
+      border-radius: 4px;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+      border: none;
+    }
+    /* Default section tag (ice-blue bg) */
+    .fac-section:not(.alt):not(.dark-bg) .fac-sec-hdr .stag {
+      background: #0a0f66;
+      color: #f8da1d;
+    }
+    /* Dark section tag */
+    .dark-bg .fac-sec-hdr .stag {
+      background: rgba(248,218,29,0.15);
+      color: #f8da1d;
+      border: 1px solid rgba(248,218,29,0.35);
+      border-radius: 20px;
+      padding: 5px 18px;
+    }
+
+    .fac-sec-hdr h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 800;
+      color: #0a0f66;
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .fac-sec-hdr h2 { color: #0a0f66; }
+    .dark-bg .fac-sec-hdr h2 { color: #fff; }
+
+    .fac-sec-hdr p {
+      font-size: 15px;
+      color: #6b7280;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.75;
+      font-weight: 600;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .fac-sec-hdr p { color: #4b5563; }
+    .dark-bg .fac-sec-hdr p { color: rgba(255,255,255,0.68); }
+
+    /* ─────────────────────────────────────────
+       ICON CARDS
+    ───────────────────────────────────────── */
+    .icon-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    /* ── WHITE SECTION CARDS (alt) ── */
+    .fac-section.alt .icon-card {
+      background: #fff;
+      border: 1px solid #e8ecf8;
+      border-left: 4px solid #f8da1d;
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: 0.3s;
+      box-shadow: 0 2px 16px rgba(10,15,102,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .fac-section.alt .icon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(10,15,102,0.12);
+      border-left-color: #0a0f66;
+    }
+    .fac-section.alt .ic-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0a0f66, #1e3a8a);
+      color: #f8da1d;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .fac-section.alt .ic-title { font-size: 17px; font-weight: 800; color: #0a0f66; font-family: 'Rajdhani', sans-serif; }
+    .fac-section.alt .ic-bullets li { font-size: 13px; color: #4b5563; font-weight: 600; display: flex; align-items: center; gap: 9px; }
+    .fac-section.alt .ic-bullets li .blt-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #f8da1d; color: #0a0f66;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* ── ICE-BLUE SECTION CARDS (default .fac-section) ── */
+    .fac-section:not(.alt):not(.dark-bg) .icon-card {
+      background: #ffffff;
+      border: 1px solid #dde3f5;
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: 0.3s;
+      box-shadow: 0 2px 12px rgba(10,15,102,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .icon-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 4px;
+      background: linear-gradient(90deg, #0a0f66, #f8da1d);
+      opacity: 0; transition: 0.3s;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .icon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(10,15,102,0.12);
+      border-color: #a5b4fc;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .icon-card:hover::before { opacity: 1; }
+    .fac-section:not(.alt):not(.dark-bg) .ic-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: #f0f4ff; color: #0a0f66; border: 2px solid #c7d2fe;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .fac-section:not(.alt):not(.dark-bg) .ic-title { font-size: 17px; font-weight: 800; color: #0a0f66; font-family: 'Rajdhani', sans-serif; }
+    .fac-section:not(.alt):not(.dark-bg) .ic-bullets li { font-size: 13px; color: #4b5563; font-weight: 600; display: flex; align-items: center; gap: 9px; }
+    .fac-section:not(.alt):not(.dark-bg) .ic-bullets li .blt-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #0a0f66; color: #f8da1d;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* ── DARK SECTION CARDS ── */
+    .dark-bg .icon-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-top: 3px solid #f8da1d;
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .dark-bg .icon-card:hover {
+      background: rgba(255,255,255,0.11);
+      border-color: rgba(248,218,29,0.5);
+      border-top-color: #f8da1d;
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+    .dark-bg .ic-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: #f8da1d; color: #0a0f66;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .dark-bg .ic-title { font-size: 17px; font-weight: 800; color: #fff; font-family: 'Rajdhani', sans-serif; }
+    .dark-bg .ic-bullets li { font-size: 13px; color: rgba(255,255,255,0.72); font-weight: 600; display: flex; align-items: center; gap: 9px; }
+    .dark-bg .ic-bullets li .blt-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(248,218,29,0.2); color: #f8da1d;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* shared bullets base */
+    .ic-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; }
+    .ic-bullets li { line-height: 1.4; }
+
+    /* ─────────────────────────────────────────
+       HOSTEL HIGHLIGHT CARD
+    ───────────────────────────────────────── */
+    .hostel-highlight {
+      background: linear-gradient(135deg, #0a0f66 0%, #06093d 100%);
+      border-radius: 18px;
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      border-top: 4px solid #f8da1d;
+    }
+    .hostel-highlight::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(248,218,29,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .hostel-left h3 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 26px; font-weight: 900; color: #fff;
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hostel-left h3 svg { color: #f8da1d; flex-shrink: 0; }
+    .hostel-left p { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.7; font-weight: 600; max-width: 500px; }
+    .hostel-bullets { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; min-width: 260px; }
+    .hostel-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(248,218,29,0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px; font-weight: 700; color: #fff;
+    }
+    .hostel-pill svg { color: #f8da1d; flex-shrink: 0; }
+
+    /* ─────────────────────────────────────────
+       CTA STRIP
+    ───────────────────────────────────────── */
+    .fac-cta-strip {
+      background: linear-gradient(135deg, #f8da1d 0%, #f5c400 100%);
+      padding: 56px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .fac-cta-strip::before {
+      content: '';
+      position: absolute;
+      bottom: -140px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(255,255,255,0.28), transparent 60%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .fac-cta-strip::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(10,15,102,0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+    .fac-cta-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+    .fac-cta-inner h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 900; color: #0a0f66;
+      margin-bottom: 10px; line-height: 1.1;
+    }
+    .fac-cta-inner p { font-size: 16px; color: #0a0f66; opacity: 0.8; font-weight: 700; margin-bottom: 32px; }
+    .fac-cta-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #0a0f66; color: #f8da1d;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 16px; font-weight: 800;
+      padding: 15px 40px;
+      border-radius: 10px; letter-spacing: 0.5px;
+      transition: 0.3s; text-decoration: none;
+    }
+    .fac-cta-btn:hover {
+      background: #06093d;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(10,15,102,0.35);
+      color: #f8da1d;
+    }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────────── */
+    @media(max-width: 1024px) {
+      .icon-grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .hostel-highlight { grid-template-columns: 1fr; gap: 24px; padding: 28px 24px; }
+      .hostel-bullets { grid-template-columns: repeat(2, 1fr); min-width: unset; }
+    }
+    @media(max-width: 768px) {
+      .icon-grid-3 { grid-template-columns: 1fr; }
+      .fac-section { padding: 40px 16px; }
+      .fac-edge-banner { padding: 40px 16px; }
+      .edge-pill-dark { font-size: 12px; padding: 8px 16px; }
+    }
+    @media(max-width: 480px) {
+      .hostel-bullets { grid-template-columns: 1fr; }
+      .fac-edge-banner h2 { font-size: 28px; }
+    }
+  </style>
+
+  <!-- HERO SECTION (unchanged) -->
+  <div class="about-hero bg-1">
+    <div class="page-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="/" style="cursor:pointer">Home</a><span class="sep">/</span><span>Facilities</span></div>
+        <h1 class="page-hero-title"><span style="color:var(--gold)">Student Facilities</span></h1>
+        <p class="page-hero-sub">Comprehensive support systems designed to help every student maximize their potential and achieve their goals.</p>
+      </div>
+      <div class="hero-card" style="text-align:center; padding:24px; background:rgba(255,255,255,0.06); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.1); box-shadow:0 10px 40px rgba(0,0,0,0.15);">
+        <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img" style="width:60px;height:60px;margin-bottom:10px;border:2px solid rgba(245,197,24,0.2);padding:4px;border-radius:50%;">
+        <h3 style="font-family:'Rajdhani',sans-serif;font-size:20px;color:var(--gold);margin-bottom:2px">SANKALP STUDY CIRCLE</h3>
+        <p style="font-size:11px;color:rgba(255,255,255,0.7);letter-spacing:1px;font-weight:600;margin-bottom:14px">MEDICAL | IIT-JEE | FOUNDATIONS</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Backup Classes</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Solved Modules</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Test Analysis</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Quick Concepts</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">Career Guidance</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:7px 10px;border-radius:8px;display:flex;align-items:center;gap:7px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span style="font-size:11px;font-weight:700;color:#fff;">24×7 Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ① THE SANKALP COMPETITIVE EDGE — moved to top -->
+  <div class="fac-edge-banner">
+    <div class="fac-edge-inner">
+      <div class="fac-edge-tag">OUR DIFFERENTIATORS</div>
+      <h2>The Sankalp <span>Competitive Edge</span></h2>
+      <p>A holistic, performance-driven system focused on long-term results — not crowd-based teaching.</p>
+      <div class="edge-pills-grid">
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Small Batch System
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Individual Attention
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          Dropper-focused Prep
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          Student-first Approach
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Foundation-to-Ranker
+        </div>
+        <div class="edge-pill-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Concept-based Learning
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② ACADEMIC INFRASTRUCTURE -->
+  <div class="fac-section alt">
+    <div class="fac-section-inner">
+      <div class="fac-sec-hdr">
+        <div class="stag">LEARNING ENVIRONMENT</div>
+        <h2>Academic Infrastructure</h2>
+        <p>A distraction-free environment designed for intense competitive preparation.</p>
+      </div>
+      <div class="icon-grid-3">
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <div class="ic-title">Smart Classrooms</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Interactive digital boards</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> AC &amp; soundproofed rooms</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Automated lecture recording</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Distraction-free design</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="ic-title">Academic Standards</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Limited batch sizes</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Daily Practice Papers (DPPs)</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Weekly test series</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Personalized attention</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <div class="ic-title">Integrated Curriculum</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> CBSE / ICSE / WB board</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Olympiad &amp; NTSE prep</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> NEET / JEE foundation</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> School + exam blend</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ RESIDENTIAL & LOGISTICS -->
+  <div class="fac-section">
+    <div class="fac-section-inner">
+      <div class="fac-sec-hdr">
+        <div class="stag">ACCOMMODATION</div>
+        <h2>Residential &amp; Transport</h2>
+        <p>Secure, well-maintained facilities so students stay focused on what matters most.</p>
+      </div>
+
+      <!-- Hostel highlight card -->
+      <div class="hostel-highlight">
+        <div class="hostel-left">
+          <h3>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Separate Hostels — Boys &amp; Girls
+          </h3>
+          <p>Premium accommodation with round-the-clock supervision. Strict entry/exit protocols, dedicated wardens on every floor, and a hygienic, disciplined environment.</p>
+        </div>
+        <div class="hostel-bullets">
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            24/7 Supervision
+          </div>
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Secure Entry/Exit
+          </div>
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Warden on Each Floor
+          </div>
+          <div class="hostel-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Concessions Available
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting tiles -->
+      <div class="icon-grid-3">
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 2.3 1.9 4.1 4.2 4.1h1c2.3 0 4.2-1.8 4.2-4.1V2"/><path d="M8 2v20"/><path d="M21 2v20"/><path d="M21 13c-2.8 0-5-2.2-5-5V2"/></svg>
+          </div>
+          <div class="ic-title">Nutritious Meals</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Home-style balanced food</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Fully sanitized kitchen</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Fresh daily preparation</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6v6"/><path d="M15 6v6"/><path d="M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </div>
+          <div class="ic-title">Transportation</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Daily pick-up &amp; drop</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Safe for day scholars</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Reliable scheduling</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <div class="ic-title">Tech-Enabled Campus</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Campus-wide Wi-Fi</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Restricted to academics</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> AC &amp; Non-AC room options</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ④ EXPERT GUIDANCE & HYBRID SUPPORT (dark) -->
+  <div class="fac-section dark-bg">
+    <div class="fac-section-inner">
+      <div class="fac-sec-hdr">
+        <div class="stag">MENTORSHIP &amp; TECHNOLOGY</div>
+        <h2>Expert Guidance &amp; Hybrid Support</h2>
+        <p>Concept-led teaching backed by experienced mentors and modern digital tools.</p>
+      </div>
+      <div class="icon-grid-3">
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <div class="ic-title">Experienced Educators</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> 5–10+ years experience</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Pan-India top institute alumni</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Proven NEET/JEE results</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Concept-first approach</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="ic-title">Dedicated Mentorship</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> One-to-one sessions</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Weak area tracking</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Regular PTMs</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Motivational guidance</li>
+          </ul>
+        </div>
+
+        <div class="icon-card">
+          <div class="ic-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <div class="ic-title">Hybrid Ecosystem</div>
+          <ul class="ic-bullets">
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Online + offline classes</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Recorded lecture access</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Personal mentorship and guidance</li>
+            <li><span class="blt-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Individual student tracking</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑤ CTA STRIP -->
+  <div class="fac-cta-strip">
+    <div class="fac-cta-inner">
+      <h2>Ready to Experience the Sankalp Difference?</h2>
+      <p>Book a free demo class and see why students across Siliguri choose us.</p>
+      <a href="contact" class="fac-cta-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Enroll for Free Demo
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- =============================== FOOTER =============================== -->
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img">
+        <div>
+          <div class="footer-logo-name">SANKALP STUDY CIRCLE</div>
+          <div class="footer-logo-sub">MEDICAL | IIT-JEE | FOUNDATIONS</div>
+        </div>
+      </div>
+      <p>Sankalp Study Circle is Siliguri's trusted coaching institute for NEET, IIT-JEE, and Foundation programs. Dedicated to making quality education accessible, affordable, and concept-driven for every aspiring student.</p>
+      <div class="social-row">
+        <a class="social-btn" href="/">f</a>
+        <a class="social-btn" href="/">in</a>
+        <a class="social-btn" href="http://wa.me/917318950032" target="_blank">W</a>
+        <a class="social-btn" href="/">YT</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-wrap" style="padding:0; border:none; height:180px;">
+        <iframe src="https://maps.google.com/maps?q=26.7427327,88.4154126&hl=en&z=16&output=embed" width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Our Courses</h4>
+      <ul>
+                <li><a href="courses">Competitive Exam</a></li>
+                  <li><a href="courses">School Academics</a></li>
+                  <li><a href="courses">Integrated Programs</a></li>
+                  <li><a href="courses">Individual Subject</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+        <div class="fc-text">Sankalp Study Circle, Siliguri, West Bengal — 734003</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+        <div class="fc-text"><a href="tel:+91-7318950032">+91-7318950032</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+        <div class="fc-text"><a href="mailto:info@sankalpstudycircles.com">info@sankalpstudycircles.com</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+        <div class="fc-text">Mon—Sat: 11 am to 9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Sankalp Study Circle. All Rights Reserved.</span>
+    <span>Medical | IIT-JEE | Foundations | Siliguri, West Bengal</span>
+    <span>Designed and developed by <a href="https://www.tiastech.in" target="_blank">TIAS</a></span>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="wa-float">
+  <a href="http://wa.me/917318950032" target="_blank" title="WhatsApp Us">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold);margin:0 auto"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+    <h3>Enquiry Submitted!</h3>
+    <p>Thank you for your interest in Sankalp Study Circle. Our team will contact you within 24 hours to schedule your free demo class.</p>
+    <button onclick="closeModal()" class="btn-gold" style="border:none;cursor:pointer;width:100%">Great, Thanks!</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

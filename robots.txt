@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Standard robots.txt for search engine crawling
+# Fixes the 'Content-Signal' unknown directive error
+Sitemap: https://www.sankalpstudycircles.com/sitemap.xml
+

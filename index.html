@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sankalp Study Circle | Medical | IIT-JEE | Foundations</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=7">
+<link rel="icon" href="sankalp_logo.svg" type="image/png" />
+</head>
+<body>
+
+<!-- NOTICE BAR -->
+<div class="notice-bar">
+  <span>NEW</span>
+  Admissions Open 2026-27 — Free Demo Classes Available! &nbsp;
+  <a href="contact" class="btn-enroll-blue">Enroll Now ➔</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">
+      <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img">
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">SANKALP</span>
+        <span class="nav-logo-sub">STUDY CIRCLE</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/"  class="active" id="nav-home">Home</a></li>
+      <li><a href="about" id="nav-about">About Us</a></li>
+      <li class="dropdown-wrap">
+        <a href="courses">Courses ▾</a>
+        <ul class="dropdown">
+          <li><a href="courses">Competitive Exam</a></li>
+          <li><a href="courses">School Academics</a></li>
+          <li><a href="courses">Integrated Programs</a></li>
+          <li><a href="courses">Individual Subject</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="facilities" id="nav-facilities">Facilities</a></li>
+      <li><a href="admissions" id="nav-admissions">Admissions</a></li>
+      <li><a href="roadmap" id="nav-roadmap">Roadmaps</a></li>
+
+      <li><a href="contact" id="nav-contact">Contact</a></li>
+      <li><a href="contact" class="nav-cta">Enroll Free Demo</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mob-menu" id="mobMenu">
+    <a href="/"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a>
+    <a href="about"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> About Us</a>
+    <a href="courses"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> Courses</a>
+    <a class="sub" href="courses">&#8627; Competitive Exam</a>
+    <a class="sub" href="courses">&#8627; School Academics</a>
+    <a class="sub" href="courses">&#8627; Integrated Programs</a>
+    <a class="sub" href="courses">&#8627; Individual Subject</a>
+    <a href="facilities"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg> Facilities</a>
+    <a href="admissions"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> Admissions</a>
+    <a href="roadmap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Roadmaps</a>
+
+    <a href="contact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Contact</a>
+    <a href="contact" class="btn-enroll-blue mob-enroll"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Enroll Now ➔</a>
+  </div>
+</nav>
+
+
+<div class="page active" id="page-index">
+
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-dots"></div>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">Siliguri's Most Trusted Coaching Institute</div>
+        <h1>  <span> Empowering </span> Every Stream &  <span> Inspiring</span> <br>Every Dream.</h1>
+        <p>At Sankalp, we nurture every student’s potential through expert guidance, holistic learning, and dedicated support across Medical, IIT-JEE, Humanities, CLAT, Commerce, and more.</p>
+        <div class="hero-btns">
+          <a href="contact" class="btn-gold">Book Free Demo Class</a>
+          <a href="courses" class="btn-outline-gold">Explore Courses</a>
+        </div>
+        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-left: 4px solid var(--gold); border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; backdrop-filter: blur(12px); box-shadow: 0 10px 40px rgba(0,0,0,0.15); margin-top: 10px;">
+          <div style="flex: 1; min-width: 280px;">
+            <div style="font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: #fff; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 42px; height: 42px; border-radius: 10px; background: rgba(245, 197, 24, 0.12); display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              Hostel Facilities
+            </div>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap; font-size: 14px; color: rgba(255,255,255,0.75); font-weight: 600;">
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Separate Campuses for Girls and Boys</span>
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 24/7 Security</span>
+              <span style="display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Comfortable Rooms</span>
+            </div>
+          </div>
+          <a href="facilities" class="btn-gold" style="padding: 12px 28px; font-size: 15px; border-radius: 8px;">View Facilities ➔</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="achievers-showcase">
+          <div class="showcase-header">
+            <span class="showcase-badge"> TOP PERFORMERS</span>
+            <h3>Making Sankalp Proud</h3>
+          </div>
+          <div class="showcase-grid">
+            
+            <div class="sc-card">
+              <img src="Rakhi.png" alt="Rakhi Roy" class="sc-img">
+              <div class="sc-overlay">
+                <div class="sc-score" style="font-size: 20px; line-height: 1.1;">JEE Mains Cleared</div>
+                <div class="sc-details">
+                  <h4>Rakhi Roy</h4>
+                  <p>1st Attempt <span>(Target Batch)</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sc-card">
+              <img src="Baibhav.png" alt="Baibhav Dhamala" class="sc-img">
+              <div class="sc-overlay">
+                <div class="sc-score">90%</div>
+                <div class="sc-details">
+                  <h4>Baibhav Dhamala</h4>
+                  <p>Class 10th CBSE <span>(Foundation)</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sc-card">
+              <img src="Nyasha.png" alt="Nyasha Sharan" class="sc-img">
+              <div class="sc-overlay">
+                <div class="sc-score">88%</div>
+                <div class="sc-details">
+                  <h4>Nyasha Sharan</h4>
+                  <p>Class 10th CBSE <span>(Foundation)</span></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sc-card">
+              <img src="Prateek.png" alt="Prateek Adhikari" class="sc-img">
+              <div class="sc-overlay">
+                <div class="sc-score">86%</div>
+                <div class="sc-details">
+                  <h4>Prateek Adhikari</h4>
+                  <p>Class 12th CBSE <span>(Crash Course)</span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE STRIP -->
+  <div class="feat-strip">
+    <div class="feat-strip-inner">
+      <div class="feat-pill">Expert Faculty</div>
+      <div class="feat-pill">Small Batch Sizes</div>
+      <div class="feat-pill">Doubt Clearing Sessions</div>
+      <div class="feat-pill">Mock Tests & Analysis</div>
+      <div class="feat-pill">Free Demo Class</div>
+      <div class="feat-pill">Affordable Fees</div>
+    </div>
+  </div>
+
+  <!-- ABOUT SNIP -->
+  <div class="section" style="background:var(--card)">
+    <div class="section-inner">
+      <div class="grid-2">
+        <div>
+          <div class="section-tag">ABOUT SANKALP</div>
+          <h2 class="section-title">From Dreams to <br>Successful Careers</h2>
+          <div class="gold-line"></div>
+          <p class="section-sub" style="margin-bottom:24px">Sankalp Study Circle is built on the values of determination, dedication, and quality education. We believe that every student has unique potential, and our goal is to guide them towards academic success with the right support, care, and mentorship.</p>
+          <ul class="check-list">
+            <li>Highly experienced and qualified faculty members</li>
+            <li>Proven track record of NEET & JEE selections</li>
+            <li>Small batch sizes for personal attention</li>
+            <li>Comprehensive study material and test series</li>
+            <li>Regular performance tracking and parent updates</li>
+          </ul>
+          <div style="margin-top:28px">
+            <a href="about" class="btn-gold">Know More About Us</a>
+          </div>
+        </div>
+        <div>
+          <div class="grid-4 hide-on-mobile" style="margin-top:0;">
+            <div class="why-card">
+              <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <h3>10+<br>Faculty</h3>
+              <p>Experienced educators</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg></div>
+              <h3>95%<br>Success</h3>
+              <p>Student selection rate</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <h3>4.5 Star<br>Rating</h3>
+              <p>Student satisfaction</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+              <h3>24/7<br>Guidance</h3>
+              <p>Constant student support</p>
+            </div>
+          </div>
+          <div class="hero-card" style="margin-top:20px;background:#0a0f66">
+            <div style="display:flex;align-items:center;gap:14px">
+              <div style="font-size:40px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+              <div>
+                <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Admissions Open 2026-27</div>
+                <div style="font-size:13px;color:rgba(255,255,255,.75);margin-bottom:14px">Limited seats —Enroll before July 15, 2026</div>
+                <a href="contact" class="btn-gold" style="font-size:13px;padding:10px 20px">Book Free Demo ➔</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION VISION -->
+  <div class="section" style="background:var(--card); padding-top: 0;">
+    <div class="section-inner">
+      <div class="grid-3">
+        <div class="why-card" style="text-align:left;padding:32px">
+          <div class="why-icon" style="margin:0 0 18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <h3 style="font-size:20px;margin-bottom:10px">Our Mission</h3>
+          <p>To help students achieve academic success through quality education, personal guidance, and a supportive learning environment that builds confidence and prepares them for future careers.</p>
+        </div>
+        <div class="why-card" style="text-align:left;padding:32px;border-color:rgba(245,197,24,0.3)">
+          <div class="why-icon" style="margin:0 0 18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+          <h3 style="font-size:20px;margin-bottom:10px">Our Vision</h3>
+          <p>To be a trusted educational institute in North Bengal, empowering students to excel in academics and grow into confident, responsible individuals.</p>
+        </div>
+        <div class="why-card" style="text-align:left;padding:32px">
+          <div class="why-icon" style="margin:0 0 18px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></div>
+          <h3 style="font-size:20px;margin-bottom:10px">Our Approach</h3>
+          <p>We focus on strong concepts, regular practice, mock tests, and personalised support. With dedicated faculty and small batches, every student receives the attention needed to succeed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSES SNIP -->
+  <div class="section">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <div class="section-tag">OUR PROGRAMS</div>
+        <h2 class="section-title">Courses We Offer</h2>
+        <div class="gold-line center"></div>
+        <p class="section-sub" style="margin:0 auto">Expertly designed programs for Medical, Engineering, and Foundation aspirants — built on concept clarity and strategic preparation.</p>
+      </div>
+      <div class="grid-2-4">
+        <div class="course-card">
+          <div class="course-top bg-1">
+            <div class="course-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <h3>Competitive Exam</h3>
+            <p>NEET &bull; JEE &bull; WBJEE &bull; CLAT</p>
+          </div>
+          <div class="course-body">
+            <p>Targeted preparation for Medical (NEET), Engineering (JEE Main & Advanced, WBJEE) and Law (CLAT) entrance exams with comprehensive study materials.</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+              <li style="font-size: 14px; color: var(--text); font-weight: 700;"><strong style="color: #1e5bb5;">✓</strong> Daily Practice Problems (DPP)</li>
+              <li style="font-size: 14px; color: var(--text); font-weight: 700;"><strong style="color: #1e5bb5;">✓</strong> Focused Study Modules</li>
+              <li style="font-size: 14px; color: var(--text); font-weight: 700;"><strong style="color: #1e5bb5;">✓</strong> All-India Test Series</li>
+            </ul>
+            <div class="course-tags">
+              <span class="tag">Medical</span><span class="tag">Engineering</span><span class="tag">Law</span>
+            </div>
+            <a href="contact" class="btn-enroll-blue block-enroll">Enroll Now &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="course-card">
+          <div class="course-top bg-2">
+            <div class="course-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <h3>School Academics</h3>
+            <p>CBSE & ICSE (Classes 6 to 12)</p>
+          </div>
+          <div class="course-body">
+            <p>Classes 6 to 10 (All Subjects) and Classes 11 & 12 across all streams: Science (PCM/PCB/PCMB), Commerce (ACC+BST+ECO), and Humanities (HIST+POL SCI+GEO).</p>
+            <div class="course-tags">
+              <span class="tag">Science</span><span class="tag">Commerce</span><span class="tag">Humanities</span>
+            </div>
+            <a href="contact" class="btn-enroll-blue block-enroll">Enroll Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top bg-1">
+            <div class="course-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg></div>
+            <h3>Integrated Programs</h3>
+            <p>School + Competitive Edge</p>
+          </div>
+          <div class="course-body">
+            <p>Designed for early rankers: School + NEET Preparation, School + JEE Preparation, and School + CLAT Preparation in an integrated framework.</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+              <li style="font-size: 14px; color: var(--text); font-weight: 700;"><strong style="color: #1e5bb5;">✓</strong> Daily Practice Problems (DPP)</li>
+              <li style="font-size: 14px; color: var(--text); font-weight: 700;"><strong style="color: #1e5bb5;">✓</strong> Board & Competitive Modules</li>
+              <li style="font-size: 14px; color: var(--text); font-weight: 700;"><strong style="color: #1e5bb5;">✓</strong> Regular Assessments</li>
+            </ul>
+            <div class="course-tags">
+              <span class="tag">Foundation</span><span class="tag">Early Edge</span>
+            </div>
+            <a href="contact" class="btn-enroll-blue block-enroll">Enroll Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top bg-2">
+            <div class="course-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+            <h3>Individual Subject</h3>
+            <p>Focus on Specific Strengths</p>
+          </div>
+          <div class="course-body">
+            <p>Specialized coaching for Physics, Chemistry, Biology, Mathematics, English, SST, Commerce, Humanities, and CS/AI/IP.</p>
+            <div class="course-tags">
+              <span class="tag">Personalized</span><span class="tag">All Subjects</span>
+            </div>
+            <a href="contact" class="btn-enroll-blue block-enroll">Enroll Now &rarr;</a>
+          </div>
+        </div>
+</div>
+      <div style="text-align:center;margin-top:32px">
+        <a href="courses" class="btn-outline-gold">View All Courses ➔</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section" style="background:var(--card)">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <div class="section-tag">STUDENT STORIES</div>
+        <h2 class="section-title">What Our Students Say</h2>
+        <div class="gold-line center"></div>
+      </div>
+      <div class="grid-3">
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Biology was my weakest subject, and I scored only 30 out of 80 in Class 9. After joining Sankalp, teachers patiently cleared my basics and solved every doubt. Slowly, my confidence grew, and Biology became one of my strongest subjects. In Class 10, I scored 29.5 out of 30. That's the Sankalp difference."</p>
+          <div class="test-author">Vaibhav</div>
+          <div class="test-role">Foundation Batch</div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"I was already a good student, but my performance wasn't consistent. At Sankalp, teachers helped me improve my accuracy, exam strategy, and time management. Today, I make fewer mistakes, feel more confident, and perform consistently better in exams."</p>
+          <div class="test-author">Shantanu</div>
+          <div class="test-role">Sankalp Student</div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"In NEET 2025, I scored 170 marks despite working hard. At Sankalp, teachers identified my mistakes and gave me the right direction. My preparation became focused, my confidence improved, and now I'm scoring 280+ in Biology and over 400 overall in practice tests."</p>
+          <div class="test-author">Hiren</div>
+          <div class="test-role">NEET Aspirant</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div style="background:#0a0f66;padding:64px 24px;text-align:center">
+    <div style="max-width:700px;margin:0 auto">
+      <div class="section-tag" style="background:rgba(245,197,24,0.2);border-color:rgba(245,197,24,0.4)">START YOUR JOURNEY</div>
+      <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:700;margin:16px 0;color:#fff">Ready to Crack NEET & JEE?</h2>
+      <div class="gold-line center"></div>
+      <p style="font-size:16px;color:rgba(255,255,255,.8);margin-bottom:32px;line-height:1.75">Join Sankalp Study Circle — Siliguri's most trusted coaching institute. Limited seats available for 2026-27 batch.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="contact" class="btn-gold">Book Free Demo Class</a>
+        <a href="admissions" class="btn-outline-gold" style="border-color:rgba(255,255,255,.6);color:#fff">View Admissions →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- =============================== FOOTER =============================== -->
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <img src="sankalp_logo.svg" alt="Sankalp Logo" class="logo-img">
+        <div>
+          <div class="footer-logo-name">SANKALP STUDY CIRCLE</div>
+          <div class="footer-logo-sub">MEDICAL | IIT-JEE | FOUNDATIONS</div>
+        </div>
+      </div>
+      <p>Sankalp Study Circle is Siliguri's trusted coaching institute for NEET, IIT-JEE, and Foundation programs. Dedicated to making quality education accessible, affordable, and concept-driven for every aspiring student.</p>
+      <div class="social-row">
+        <a class="social-btn" href="/">f</a>
+        <a class="social-btn" href="/">in</a>
+        <a class="social-btn" href="http://wa.me/917318950032" target="_blank">W</a>
+        <a class="social-btn" href="/">YT</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-wrap" style="padding:0; border:none; height:180px;">
+        <iframe src="https://maps.google.com/maps?q=26.7427327,88.4154126&hl=en&z=16&output=embed" width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Our Courses</h4>
+      <ul>
+                <li><a href="courses">Competitive Exam</a></li>
+                  <li><a href="courses">School Academics</a></li>
+                  <li><a href="courses">Integrated Programs</a></li>
+                  <li><a href="courses">Individual Subject</a></li>
+                  <li><a href="roadmap" style="color:var(--gold);font-weight:700">Career Roadmaps</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+        <div class="fc-text">Unity Square, Champasari Rd, Indrapally, Champasari, Siliguri, West Bengal 734003</div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+        <div class="fc-text"><a href="tel:+91-7318950032">+91-7318950032</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+        <div class="fc-text"><a href="mailto:info@sankalpstudycircles.com">info@sankalpstudycircles.com</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+        <div class="fc-text">Mon—Sat: 11 am to 9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Sankalp Study Circle. All Rights Reserved.</span>
+    <span>Medical | IIT-JEE | Foundations | Siliguri, West Bengal</span>
+    <span>Designed and developed by <a href="https://www.tiastech.in" target="_blank">TIAS</a></span>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="wa-float">
+  <a href="http://wa.me/917318950032" target="_blank" title="WhatsApp Us">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+    <div class="modal-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold);margin:0 auto"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+    <h3>Enquiry Submitted!</h3>
+    <p>Thank you for your interest in Sankalp Study Circle. Our team will contact you within 24 hours to schedule your free demo class.</p>
+    <button onclick="closeModal()" class="btn-gold" style="border:none;cursor:pointer;width:100%">Great, Thanks!</button>
+  </div>
+</div>
+
+<!-- CRASH COURSE POPUP MODAL -->
+<div class="modal-overlay" id="popupModal" onclick="if(event.target === this) closePopup()">
+  <div class="poster-modal-box">
+    <button class="poster-close-btn" onclick="closePopup()" aria-label="Close Popup">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <a href="contact" class="poster-link-wrap" title="Click to Enroll for Winter Crash Course">
+      <img src="Carsh.jpeg" alt="Winter Crash Course - Sankalp Study Circle" class="poster-img">
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
