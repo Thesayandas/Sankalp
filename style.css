@@ -89,6 +89,8 @@ nav{background:rgba(255,255,255,0.97);border-top:4px solid var(--gold);backdrop-
 .btn-gold:hover{background:var(--gold3);transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,197,24,0.35)}
 .btn-outline-gold{border:2px solid var(--gold);color:var(--gold);padding:12px 32px;border-radius:10px;font-weight:800;font-size:15px;font-family:'Rajdhani',sans-serif;letter-spacing:.5px;transition:.2s;display:inline-block}
 .btn-outline-gold:hover{background:rgba(245,197,24,0.1);transform:translateY(-2px)}
+.btn-outline-blue{border:2px solid #2563eb;color:#2563eb;padding:12px 32px;border-radius:10px;font-weight:800;font-size:15px;font-family:'Rajdhani',sans-serif;letter-spacing:.5px;transition:.2s;display:inline-block;background:transparent}
+.btn-outline-blue:hover{background:#2563eb;color:#fff!important;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.3)}
 .hero-stats{display:flex;gap:32px;flex-wrap:wrap}
 .stat{display:flex;flex-direction:column}
 .stat-num{font-family:'Rajdhani',sans-serif;font-size:32px;font-weight:700;color:var(--gold);line-height:1}
